@@ -13,12 +13,23 @@ https://vincenttam.github.io/javascripts/MathJaxLocal.js"></script>
 mida el doble del lado $AB$. </p>
 
 <img src="p1.png" alt="p1">
-
-<button title="Solución/Esconder solución" type="button" onclick="if(document.getElementById('spoiler') .style.display=='none') {document.getElementById('spoiler') .style.display=''}else{document.getElementById('spoiler') .style.display='none'}">Show/Hide</button>
+<button title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler') .style.display=='none') {document.getElementById('spoiler') .style.display=''}else{document.getElementById('spoiler') .style.display='none'}">Mostrar/esconder solución</button>
 <div id="spoiler" style="display:none">
   <p><strong>Dibujo</strong></p> 
   <img src="sp1.png" alt="sp1">
-
+  
+  <p><strong>Pasos de la construcción</strong></p>
+  
+  <p> 1) Extendemos el segmento $\overline{AB}$ a una recta $AB$ y colocamos el punto $p_1$ arbitrariamente sobre el segmento $\hat{AB}$.
+      2) Construimos un triángulo equilátero $\Delta Ap_1p_2$ para así armar un ángulo de $60^\circ$. Trazamos la recta $Ap_1$.
+      3) Ahora el paso crucial es construir una recta perpendicular a $AB$ pero que mida dos veces $\overline{AB}$
+      Para hacer esto, simplemente trazamos la recta perpendicular a $AB$ que pasa por $A$ y trazamos la circunferencia de centro $A$ con radio $\overline{AB}}$.
+      Esta se corta con la perpendicular en $p_3$. Hacemos algo análogo trazando circunferencia de centro $p_3$ y radio $\overline{AB}}$, llamamos $p_4$ a la interseección 
+      de la circunferencia con la perpendicular.
+      4) Ahora trazamos una circunferencia de radio $2\overline{AB}$ con centro en A
+  </p>
+  
+  
 </div>  
   
 <p><strong>Why are they consistent?</strong></p>

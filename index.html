@@ -9,8 +9,8 @@ https://vincenttam.github.io/javascripts/MathJaxLocal.js"></script>
 
 <h2>Problema 1</h2>
 
-<p>Dado un segmento $AB$ construir un paralelogramo $ABCD$ tal que $\hat{A} = 60^\circ$ y $AC = 2AB$, es decir, la diagonal $AC$ 
-mida el doble del lado $AB$. </p>
+<p>Dado un segmento $AB$ construir un paralelogramo $ABCD$ tal que $\hat{A} = 60^\circ$ y $\overline{AC} = 2\overline{AB}$, es decir, la diagonal $\overline{AC}$ 
+mida el doble del lado $\overline{AB}$. </p>
 
 <img src="p1.png" alt="p1">
 <button title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler') .style.display=='none') {document.getElementById('spoiler') .style.display=''}else{document.getElementById('spoiler') .style.display='none'}">Mostrar/esconder solución</button>
@@ -24,12 +24,18 @@ mida el doble del lado $AB$. </p>
       2) Construimos un triángulo equilátero $\Delta Ap_1p_2$ para así armar un ángulo de $60^\circ$. Trazamos la recta $Ap_1$.
       3) Ahora vamos a construir una circunferencia de centro $B$ y radio $\overline{AB}$. Marcamos la intersección $p_3$ de esta circunferencia
       con la recta $AB$. 
-      4) Ahora trazamos una circunferencia de radio $2\overline{AB}$ con centro en A, simplemente 
+      4) Ahora trazamos una circunferencia $\mathcal{C}_1$ de radio $2\overline{AB}$ con centro en A, simplemente 
       trazamos la circunferencia con centro en $A$ de radio $\overline{Ap_3}$
-      5) Trazamos la paralela a la recta $Ap_1$ que pasa por el punto $B$. La intersección de esta paralela con la circunferencia de radio 
-      $2\overline{AB}$ es $C$. Para completar el paralelogramo simplemente trazamos la paralela a $\overline{AB}$ que pasa por $C$.
+      5) Trazamos la paralela a la recta $Ap_1$ que pasa por el punto $B$. La intersección de esta paralela con la circunferencia $\mathcal{C}_1$ 
+      es $C$. Para completar el paralelogramo simplemente trazamos la paralela a $\overline{AB}$ que pasa por $C$ y marcamos $D$ como la intersección 
+      entre esta paralela y la recta $Ap_1$
   </p>
   
+  <p><strong>Justificación</strong></p>
+  
+  <p> El ángulo $\hat{A}$ mide $60^\circ$ por construcción, ya que $\hat{A} = p_1\hat{A}p_2 = D\hat{A}B =  60^\circ$ (podemos reemplazar $p_1$ y $p_2$ por $D$ y $B$ respectivamente porque están sobre la misma recta). 
+    Por otro lado, $\overline{AC} = 2\overline{AB}$ pues la circunferencia $\mathcal{C}_1$ tiene radio $2\overline{AB}$. Por último es un paralelogramo pues sus lados opuestos fueron construidos de manera que sean paralelos. 
+  </p>  
   
 </div>  
   

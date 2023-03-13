@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>MathJax example</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+</head> 
+
+<body>  
+  
+<h2>Problema 1</h2>
+
+<p>Dado un segmento \(AB\) construir un paralelogramo \(ABCD\) tal que \(\hat{A} = 60^\circ\) y \(\overline{AC} = 2\overline{AB}\), es decir, la diagonal \(\overline{AC}\) 
+mida el doble del lado \(\overline{AB}\). </p>
+
+<img src="p1.png" alt="p1"><br>
+
+<button title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler') .style.display=='none') {document.getElementById('spoiler') .style.display=''}else{document.getElementById('spoiler') .style.display='none'}">Mostrar/esconder solución</button>
+<div id="spoiler" style="display:none">
+  <p><strong>Dibujo</strong></p> 
+  <img src="sp1.png" alt="sp1">
+  
+  <p><strong>Pasos de la construcción</strong></p>
+  
+  <p> 1) Extendemos el segmento \(\overline{AB}\) a una recta \(AB\) y colocamos el punto \(p_1\) arbitrariamente sobre el segmento \(\hat{AB}\). <br>
+      2) Construimos un triángulo equilátero \(\Delta Ap_1p_2\) para así armar un ángulo de \(60^\circ\). Trazamos la recta \(Ap_1\). <br> 
+      3) Ahora vamos a construir una circunferencia de centro \(B\) y radio \(\overline{AB}\). Marcamos la intersección \(p_3\) de esta circunferencia
+      con la recta \(AB\). <br>
+      4) Ahora trazamos una circunferencia \(\mathcal{C}_1\) de radio \(2\overline{AB}\) con centro en A, simplemente 
+      trazamos la circunferencia con centro en \(A\) de radio \(\overline{Ap_3}\) <br>
+      5) Trazamos la paralela a la recta \(Ap_1\) que pasa por el punto \(B\). La intersección de esta paralela con la circunferencia \(\mathcal{C}_1\) 
+      es \(C\). Para completar el paralelogramo simplemente trazamos la paralela a \(\overline{AB}\) que pasa por \(C\) y marcamos \(D\) como la intersección 
+      entre esta paralela y la recta \(Ap_1\) 
+  </p>
+  
+  <p><strong>Justificación</strong></p>
+  
+  <p> El ángulo \(\hat{A}\) mide \(60^\circ\) por construcción, ya que \(\hat{A} = p_1\hat{A}p_2 = D\hat{A}B =  60^\circ\) (podemos reemplazar \(p_1\) y \(p_2\) por \(D\) y \(B\) 
+    respectivamente porque están sobre la misma recta). 
+    Por otro lado, \(\overline{AC} = 2\overline{AB}\) pues la circunferencia \(\mathcal{C}_1\) tiene radio \(2\overline{AB}\) y \(C\) yace sobre \(\mathcal{C}_1\). 
+    Por último es un paralelogramo pues sus lados opuestos fueron construidos de manera que sean paralelos. 
+  </p>  
+  
+</div>  
+
+<h2>Problema 2</h2>
+
+<p>Dado un triángulo \(\Delta ABC\), un punto \(A'\) tal que \(CB\) sea un eje de reflexión y \(\Delta A'BC\) sea congruente a \(\Delta ABC\). (En palabras llanas, \(\Delta ABC\) y \(\Delta A'BC\) tiene que ser una "misma figura" espejada respecto de \(CB\)).</p>
+
+<img src="p2.png" alt="p2"><br>
+
+<button title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler2') .style.display=='none') {document.getElementById('spoiler2') .style.display=''}else{document.getElementById('spoiler2') .style.display='none'}">Mostrar/esconder solución</button>
+<div id="spoiler2" style="display:none">
+  <p><strong>Dibujo</strong></p> 
+  <img src="sp2.png" alt="sp2">
+  
+  <p><strong>Pasos de la construcción</strong></p>
+  
+  <p> 1) Trazamos la perpendicular a \(CB\) por \(A\). Llamemos \(\mathcal{L}\) a esta recta. A la intersección entre \(\mathcal{L}\) y \(CB\) la llamamos \(D\). (Cuestión aparte, \(\overline{AD}\) es la altura de \(\Delta ABC\) por \(A\)) <br>
+      2) Trazamos la circunferencia de centro \(C\) y radio \(\overline{AB}\). La intersección entre \(\mathcal{L}\) y circunferencia la llamamos \(A'\).  <br>
+  </p>
+  
+  <p><strong>Justificación</strong></p>
+  
+  <p> Tenemos que ver que \(\Delta ABC\) y \(\Delta A'BC\) son congruentes. Primero que nada veamos que \(A\hat{B}D = A'\hat{B}D\). El triángulo \(\Delta ABA'\) es isósceles tal que \(\overline{AB} = \overline{A'B}\) 
+    ya que \(\overline{AB}\) y \(\overline{A'B}\) son radios de una misma circunferencia. Por lo tanto, \(B\hat{A}D = B\hat{A'}D\). Por construcción, \(A\) y \(A'\) están 
+    en la recta perpendicular a \(\overline{BD}\) y por lo tanto \(A\hat{D}B = A'\hat{D}B = 90^\circ\). De esta manera, como dos ángulos distintos de los triángulos  \(\Delta BAD\) y \(\Delta BA'D\) son iguales, resulta que los tres ángulos son iguales.
+    Esto muestra que \(A\hat{B}C = 180^\circ - A\hat{B}D = 180^\circ - A'\hat{B}D = A'\hat{B}C\).
+    
+    Ahora, usamos el criterio LAL para mostrar que \(\Delta ABC = \Delta A'BC\). Tenemos que \(\overline{BC}\) es lado compartido, \(\overline{AB} = \overline{A'B}\) 
+    como ya dijimos y además \(A\hat{B}C = A'\hat{B}C\). Por lo tanto concluimos.
+  </p>
+</div>  
+
+  
+
+ <h2>Problema 3</h2>
+
+<p>Dado un segmento \(AB\) construir un triángulo \(\Delta ABC\) tal que \(\hat{A} = 30^\circ\) y \(\overline{AC} + \overline{BC} = 4\overline{AB}\) </p>
+
+<img src="p1.png" alt="p1"><br>
+
+<button title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler3') .style.display=='none') {document.getElementById('spoiler3') .style.display=''}else{document.getElementById('spoiler3') .style.display='none'}">Mostrar/esconder solución</button>
+<div id="spoiler3" style="display:none">
+  <p><strong>Dibujo</strong></p> 
+  <img src="sp3.png" alt="sp3"> 
+  
+  <p><strong>Pasos de la construcción</strong></p>
+  
+  <p>1) Elegimos un punto arbitrario \(p_1\) sobre el segmento \(\overline{AB}\) y construimos un triángulo equilátero \(\Delta Ap_1p_2\) sobre \(\overline{AB}\) de manera tal que formamos un ángulo de \(60^\circ\). <br>
+  2) Trazamos la bisectriz del angulo \(p_1\hat{A}p_2\) y obtenemos un ángulo de \(30^\circ\). Llamemos \(\mathcal{L}\) a la bisectriz.  <br>
+  3) Trazamos la circunferencia con centro en \(A\) y radio \(\overline{AB}\). Llamemos \(A_1\) a la intersección entre esta circunferencia y \(\mathcal{L}\). 
+    Trazamos la circunferencia con centro en \(A_1\) y radio \(\overline{AB}\). Llamemos \(A_2\) a la intersección entre esta circunferencia y \(\mathcal{L}\).
+    Repetimos este mismo procedimiento 2 veces mas hasta marcar \(A_4\), es decir \(\overline{AA_4} = 4\overline{AB}\) <br>
+  4) Ahora trazamos la recta auxiliar \(BA_4\) y trazamos la mediatriz \(\mathcal{M}\) de esta. La intersección de \(\mathcal{M}\) y \(\mathcal{L}\) es el punto \(C\) buscado. 
+  </p>
+  
+  
+   <p><strong>Justificación</strong></p>
+  
+  <p> Es claro por construcción que \(B\hat{A}C = p_1\hat{A}A_4 = 30^\circ\) (podemos cambiar \(B\) y \(C\) por \(p_1\)  y \(C\) respectivamente pues estan sobre las mismas rectas).
+    Además, por construcción \(\overline{AA_4} = 4\overline{AB}\), con lo cual queremos ver que \(\overline{AA_4} = \overline{AC} + \overline{BC}\). 
+    Sabemos que \(\overline{AA_4} = \overline{AC} + \overline{CA_4}\), pero notemos que como \(C\) está la mediatriz de \(BA_4\), tenemos que \(\overline{BC} = \overline{CA_4}\). 
+    Con lo cual \(\overline{AA_4} = \overline{AC} + \underbrace{\overline{CA_4}}_{=\overline{BC}} = \overline{AC} + \overline{BC}\) como queriamos ver.
+    
+  </p>
+  
+</div>   
+  
+</body>
+</html><!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>MathJax example</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+</head> 
+
+<body>  
+  
+<h2>Problema 1</h2>
+
+<p>Dado un segmento \(AB\) construir un paralelogramo \(ABCD\) tal que \(\hat{A} = 60^\circ\) y \(\overline{AC} = 2\overline{AB}\), es decir, la diagonal \(\overline{AC}\) 
+mida el doble del lado \(\overline{AB}\). </p>
+
+<img src="p1.png" alt="p1"><br>
+
+<button title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler') .style.display=='none') {document.getElementById('spoiler') .style.display=''}else{document.getElementById('spoiler') .style.display='none'}">Mostrar/esconder solución</button>
+<div id="spoiler" style="display:none">
+  <p><strong>Dibujo</strong></p> 
+  <img src="sp1.png" alt="sp1">
+  
+  <p><strong>Pasos de la construcción</strong></p>
+  
+  <p> 1) Extendemos el segmento \(\overline{AB}\) a una recta \(AB\) y colocamos el punto \(p_1\) arbitrariamente sobre el segmento \(\hat{AB}\). <br>
+      2) Construimos un triángulo equilátero \(\Delta Ap_1p_2\) para así armar un ángulo de \(60^\circ\). Trazamos la recta \(Ap_1\). <br> 
+      3) Ahora vamos a construir una circunferencia de centro \(B\) y radio \(\overline{AB}\). Marcamos la intersección \(p_3\) de esta circunferencia
+      con la recta \(AB\). <br>
+      4) Ahora trazamos una circunferencia \(\mathcal{C}_1\) de radio \(2\overline{AB}\) con centro en A, simplemente 
+      trazamos la circunferencia con centro en \(A\) de radio \(\overline{Ap_3}\) <br>
+      5) Trazamos la paralela a la recta \(Ap_1\) que pasa por el punto \(B\). La intersección de esta paralela con la circunferencia \(\mathcal{C}_1\) 
+      es \(C\). Para completar el paralelogramo simplemente trazamos la paralela a \(\overline{AB}\) que pasa por \(C\) y marcamos \(D\) como la intersección 
+      entre esta paralela y la recta \(Ap_1\) 
+  </p>
+  
+  <p><strong>Justificación</strong></p>
+  
+  <p> El ángulo \(\hat{A}\) mide \(60^\circ\) por construcción, ya que \(\hat{A} = p_1\hat{A}p_2 = D\hat{A}B =  60^\circ\) (podemos reemplazar \(p_1\) y \(p_2\) por \(D\) y \(B\) 
+    respectivamente porque están sobre la misma recta). 
+    Por otro lado, \(\overline{AC} = 2\overline{AB}\) pues la circunferencia \(\mathcal{C}_1\) tiene radio \(2\overline{AB}\) y \(C\) yace sobre \(\mathcal{C}_1\). 
+    Por último es un paralelogramo pues sus lados opuestos fueron construidos de manera que sean paralelos. 
+  </p>  
+  
+</div>  
+
+<h2>Problema 2</h2>
+
+<p>Dado un triángulo \(\Delta ABC\), un punto \(A'\) tal que \(CB\) sea un eje de reflexión y \(\Delta A'BC\) sea congruente a \(\Delta ABC\). (En palabras llanas, \(\Delta ABC\) y \(\Delta A'BC\) tiene que ser una "misma figura" espejada respecto de \(CB\)).</p>
+
+<img src="p2.png" alt="p2"><br>
+
+<button title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler2') .style.display=='none') {document.getElementById('spoiler2') .style.display=''}else{document.getElementById('spoiler2') .style.display='none'}">Mostrar/esconder solución</button>
+<div id="spoiler2" style="display:none">
+  <p><strong>Dibujo</strong></p> 
+  <img src="sp2.png" alt="sp2">
+  
+  <p><strong>Pasos de la construcción</strong></p>
+  
+  <p> 1) Trazamos la perpendicular a \(CB\) por \(A\). Llamemos \(\mathcal{L}\) a esta recta. A la intersección entre \(\mathcal{L}\) y \(CB\) la llamamos \(D\). (Cuestión aparte, \(\overline{AD}\) es la altura de \(\Delta ABC\) por \(A\)) <br>
+      2) Trazamos la circunferencia de centro \(C\) y radio \(\overline{AB}\). La intersección entre \(\mathcal{L}\) y circunferencia la llamamos \(A'\).  <br>
+  </p>
+  
+  <p><strong>Justificación</strong></p>
+  
+  <p> Tenemos que ver que \(\Delta ABC\) y \(\Delta A'BC\) son congruentes. Primero que nada veamos que \(A\hat{B}D = A'\hat{B}D\). El triángulo \(\Delta ABA'\) es isósceles tal que \(\overline{AB} = \overline{A'B}\) 
+    ya que \(\overline{AB}\) y \(\overline{A'B}\) son radios de una misma circunferencia. Por lo tanto, \(B\hat{A}D = B\hat{A'}D\). Por construcción, \(A\) y \(A'\) están 
+    en la recta perpendicular a \(\overline{BD}\) y por lo tanto \(A\hat{D}B = A'\hat{D}B = 90^\circ\). De esta manera, como dos ángulos distintos de los triángulos  \(\Delta BAD\) y \(\Delta BA'D\) son iguales, resulta que los tres ángulos son iguales.
+    Esto muestra que \(A\hat{B}C = 180^\circ - A\hat{B}D = 180^\circ - A'\hat{B}D = A'\hat{B}C\).
+    
+    Ahora, usamos el criterio LAL para mostrar que \(\Delta ABC = \Delta A'BC\). Tenemos que \(\overline{BC}\) es lado compartido, \(\overline{AB} = \overline{A'B}\) 
+    como ya dijimos y además \(A\hat{B}C = A'\hat{B}C\). Por lo tanto concluimos.
+  </p>
+</div>  
+
+  
+
+ <h2>Problema 3</h2>
+
+<p>Dado un segmento \(AB\) construir un triángulo \(\Delta ABC\) tal que \(\hat{A} = 30^\circ\) y \(\overline{AC} + \overline{BC} = 4\overline{AB}\) </p>
+
+<img src="p1.png" alt="p1"><br>
+
+<button title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler3') .style.display=='none') {document.getElementById('spoiler3') .style.display=''}else{document.getElementById('spoiler3') .style.display='none'}">Mostrar/esconder solución</button>
+<div id="spoiler3" style="display:none">
+  <p><strong>Dibujo</strong></p> 
+  <img src="sp3.png" alt="sp3"> 
+  
+  <p><strong>Pasos de la construcción</strong></p>
+  
+  <p>1) Elegimos un punto arbitrario \(p_1\) sobre el segmento \(\overline{AB}\) y construimos un triángulo equilátero \(\Delta Ap_1p_2\) sobre \(\overline{AB}\) de manera tal que formamos un ángulo de \(60^\circ\). <br>
+  2) Trazamos la bisectriz del angulo \(p_1\hat{A}p_2\) y obtenemos un ángulo de \(30^\circ\). Llamemos \(\mathcal{L}\) a la bisectriz.  <br>
+  3) Trazamos la circunferencia con centro en \(A\) y radio \(\overline{AB}\). Llamemos \(A_1\) a la intersección entre esta circunferencia y \(\mathcal{L}\). 
+    Trazamos la circunferencia con centro en \(A_1\) y radio \(\overline{AB}\). Llamemos \(A_2\) a la intersección entre esta circunferencia y \(\mathcal{L}\).
+    Repetimos este mismo procedimiento 2 veces mas hasta marcar \(A_4\), es decir \(\overline{AA_4} = 4\overline{AB}\) <br>
+  4) Ahora trazamos la recta auxiliar \(BA_4\) y trazamos la mediatriz \(\mathcal{M}\) de esta. La intersección de \(\mathcal{M}\) y \(\mathcal{L}\) es el punto \(C\) buscado. 
+  </p>
+  
+  
+   <p><strong>Justificación</strong></p>
+  
+  <p> Es claro por construcción que \(B\hat{A}C = p_1\hat{A}A_4 = 30^\circ\) (podemos cambiar \(B\) y \(C\) por \(p_1\)  y \(C\) respectivamente pues estan sobre las mismas rectas).
+    Además, por construcción \(\overline{AA_4} = 4\overline{AB}\), con lo cual queremos ver que \(\overline{AA_4} = \overline{AC} + \overline{BC}\). 
+    Sabemos que \(\overline{AA_4} = \overline{AC} + \overline{CA_4}\), pero notemos que como \(C\) está la mediatriz de \(BA_4\), tenemos que \(\overline{BC} = \overline{CA_4}\). 
+    Con lo cual \(\overline{AA_4} = \overline{AC} + \underbrace{\overline{CA_4}}_{=\overline{BC}} = \overline{AC} + \overline{BC}\) como queriamos ver.
+    
+  </p>
+  
+</div>   
+  
+</body>
+</html>

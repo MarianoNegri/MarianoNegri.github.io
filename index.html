@@ -14,7 +14,7 @@
 <body>  
 
 <!--   <a href="subdir/thefile.html">my link</a>--> 
- <a href="ejfaciles.html"></a>Ejercicios que tienen que poder hacer si o si (Aparte de la guía)</a>
+ <a href="ejfaciles.html">Ejercicios que idealmente tienen que poder hacer (Aparte de los de la guía)</a> <br>
 
 
  <h2>Problema 1</h2>
@@ -73,7 +73,7 @@ mida el doble del lado \(\overline{AB}\). </p>
   
   <p> Tenemos que ver que \(\Delta ABC\) y \(\Delta A'BC\) son congruentes. Primero que nada veamos que \(A\hat{B}D = A'\hat{B}D\). El triángulo \(\Delta ABA'\) es isósceles tal que \(\overline{AB} = \overline{A'B}\) 
     ya que \(\overline{AB}\) y \(\overline{A'B}\) son radios de una misma circunferencia. Por lo tanto, \(B\hat{A}D = B\hat{A'}D\). Por construcción, \(A\) y \(A'\) están 
-    en la recta perpendicular a \(\overline{BD}\) y por lo tanto \(A\hat{D}B = A'\hat{D}B = 90^\circ\). De esta manera, como dos ángulos distintos de los triángulos  \(\Delta BAD\) y \(\Delta BA'D\) son iguales, resulta que los tres ángulos son iguales y luego \(A\hat{B}D = A'\hat{B}D\).
+    en la recta perpendicular a \(\overline{BD}\) y por lo tanto \(A\hat{D}B = A'\hat{D}B = 90^\circ\). De esta manera, como dos ángulos distintos de los triángulos  \(\Delta BAD\) y \(\Delta BA'D\) son iguales, resulta que los tres ángulos son iguales y luego \(A\hat{B}D = A'\hat{B}D\) que era lo primero que queriamos ver.
     Esto muestra que \(A\hat{B}C = 180^\circ - A\hat{B}D = 180^\circ - A'\hat{B}D = A'\hat{B}C\).
     
     Ahora, usamos el criterio LAL para mostrar que \(\Delta ABC = \Delta A'BC\). Tenemos que \(\overline{BC}\) es lado compartido, \(\overline{AB} = \overline{A'B}\) 
@@ -87,7 +87,7 @@ mida el doble del lado \(\overline{AB}\). </p>
 
 <p>Dado un segmento \(\overline{AB}\) construir un triángulo \(\Delta ABC\) tal que \(\hat{A} = 30^\circ\) y \(\overline{AC} + \overline{BC} = 4\overline{AB}\) </p>
 
-<img src="p1.png" alt="p1"><br>
+<img src="p1.png" alt="p3"><br>
 
 <button title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler3') .style.display=='none') {document.getElementById('spoiler3') .style.display=''}else{document.getElementById('spoiler3') .style.display='none'}">Mostrar/esconder solución</button>
 <div id="spoiler3" style="display:none">
@@ -199,6 +199,70 @@ son triángulos isóceles, de donde obtenemos que \(O\hat{A}C = O\hat{C}A = \alp
 
 
 </div> 
+
+
+<h2>Problema 7</h2>
+<p> Sea \(\overline{AB}\) un segmento dado. Construir un punto \(C \) tal que \( \hat{C} = 45^\circ\) y \(\overline{AC} = \overline{BC}\) (es decir crear \( \Delta ABC  \) tal que sea isóceles y \(\hat{C} = 45^\circ\) donde \( \hat{C} \) es el ángulo distinto ) </p> 
+
+<img src="p1.png" alt="p7"> <br>
+
+<button title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler7') .style.display=='none') {document.getElementById('spoiler7') .style.display=''}else{document.getElementById('spoiler7') .style.display='none'}">Mostrar/esconder solución</button>
+<div id="spoiler7" style="display:none"> 
+
+<p> La estrategia va a ser la siguiente: primero vamos a construir un triángulo isóceles como nos piden pero no nos vamos a preocupar por el hecho de que su base pase por \(\overline{AB}\). Vamos a poner dos puntos arbitrarios \(O\) y \(p_1\) sobre la mediatriz de \(\overline{AB} \) a partir de ahí 
+  vamos a armar un triángulo isoceles que cumpla que \( \hat{p_1} = 45^\circ \) haciendo un circulo \( \mathcal{C}(O,p_1) \) y trazando bisectrices. Esto es mucho mas sencillo de hacer, como muestra la figura debajo, donde vemos el triangulo \(\Delta p_1QR \):</p>
+
+  <img src="sp7p1.png" alt="sp7p1"> <br>
+
+<p> Ahora si, vamos a usar semejanza para armar el triángulo pedido. Simplemente trazamos la paralela a \(\overline{p_1Q}\) que pasa por \(A\). La intersección entre la mediatriz y la paralela es \(C\):  </p>   
+
+<img src="sp7p2.png" alt="sp7p2"> <br>
+
+<p> Notemos que los triángulos \(\Delta p_1QM \) y \(\Delta CAM \) son semejantes ya que \(p_1Q \) es paralela a \(CA\) por construcción. Luego tienen todos sus ángulos iguales, 
+en particular \( A\hat{C}M = Q\hat{p_1}M  = \frac{45^\circ}{2} \).   </p>
+
+<p> Ahora terminemos. Es claro que \(\Delta CAM \) es congruente a \(\Delta CBM \) por tratarse de triángulos con dos lados iguales ( \(\overline{CM}\) es compartido y \(\overline{AM} = \overline{BM} \) por mediatriz  ) y la mediatri hace que los ángulo comprendidos por estos lados sean \(90^\circ\). Así concluimos que \(\Delta CAM \) es congruente a \(\Delta CBM \) por LAL. 
+  Entonces \( A\hat{C}B = A\hat{C}M + B\hat{C}M = 45^\circ/2 + 45^\circ/2 = 45^\circ \) y listo.</p>
+
+
+</div>  
+
+
+<h2>Problema 8</h2>
+
+<p> Dado un triángulo \( \Delta ABC\), inscribir un cuadrado \(DEFG\) adentro de este. </p>
+
+<img src="p8.png" alt="p8"> <br>
+
+
+<button title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler8') .style.display=='none') {document.getElementById('spoiler8') .style.display=''}else{document.getElementById('spoiler8') .style.display='none'}">Mostrar/esconder solución</button>
+<div id="spoiler8" style="display:none">
+ 
+  <p><strong>Análisis/Pasos</strong></p>
+
+  <p> La estrategia es construir un cuadrado arbitrario \(p_1p_2p_3p_4\) con \(p_1\) en \(\overline{AC}\) y \(p_2\) en \(\overline{AB}\) 
+    como muestra la figura abajo:
+  </p>
+
+  <img src="sp8p1.png" alt="sp8p1"> 
+
+  <p> Una vez hecho esto, trazamos la recta \(Ap_3\) que tendrá una intersección \(D\) con el lado \( \overline{BC}\). Luego tiramos una perpendicular a \(AC\) que pasa por \(D\) 
+    y la intersección con \(\overline{AC}\) la llamamos  \(G\). De manera similar, 
+    tiramos una paralela a \(AC\) que pasa por \(D\) y a la intersección con \(\overline{AB}\) la llamamos \(E\) como muestra la figura abajo:
+    
+  </p>
+
+  <img src="sp8p2.png" alt="sp8p2"> 
+
+  <p><strong>Justificación</strong></p>
+
+  <p>Lo que realmente tenemos que justificar es el hecho de que \(\overline{DE} = \overline{DG}\). 
+    Observemos que por un lado \(\Delta Ap_3p_4\) es semejante a \(\Delta ADG \). Con lo cual \( \overline{p_3p_4}/\overline{DG} = \overline{Ap_3}/\overline{AD} \).
+    Por otro lado, \(Delta Ap_2p_3\) es semejante a \(\Delta AED \). Con lo cual \( \overline{p_2p_3}/\overline{ED} = \overline{Ap_3}/\overline{AD} \). 
+    Pero entonces \(\overline{p_2p_3}/\overline{ED} = \overline{p_3p_4}/\overline{DG}\). Pero por construcción \(\overline{p_2p_3} = \overline{p_3p_4}\) con lo cual \(\overline{ED} = \overline{DG} \).
+  </p>
+</div> 
+
 
 
 </body>

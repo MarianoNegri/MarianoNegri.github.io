@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Página Mariano Negri</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+</head> 
+
+
+<body>  
+
+<p>
+Dados los puntos \(A\), \(P\) y \(Q\) como en la figura, construir un cuadrado \(ABCD\) tal que \(P\) esté en el lado \(\overline{BC}\) y \(Q\) esté en el lado \(\overline{CD}\)     
+</p>
+
+<img src="poma.png" alt="poma"><br>
+
+<button title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler') .style.display=='none') {document.getElementById('spoiler') .style.display=''}else{document.getElementById('spoiler') .style.display='none'}">Mostrar/esconder solución</button>
+<div id="spoiler" style="display:none">
+  <p><strong>Dibujo</strong></p> 
+  <img src="spoma.png" alt="sp1">
+  
+    <p> Nuestro objetivo realmente es crear un punto \(C\) tal que \(P\hat{C}Q = 90^\circ \) y \(A\hat{C}Q = 45^\circ \), veamos como: </p>
+
+  <p><strong>Pasos de la construcción</strong></p>
+  <p>
+  1) Armamos una circunferencia \(\mathcal{C}\) cuyo diametro sea \(\overline{PQ}\) y llamamos al centro \(O\) <br>
+  2) Sea \(\mathcal{M}\) la mediatriz de \(\overline{PQ}\). A la intersección de \(\mathcal{M}\) y \(\mathcal{C}\) del lado de \(A\), la llamamos \(R\) <br>
+  3) Trazamos la recta \(AR\) y el punto donde corta con \(\mathcal{C}\) lo llamamos \(C\). <br>
+  4) Finalmente creamos las rectas \(PC\) y \(QC\), el resto es simplemente construir paralelas.  
+  </p>
+
+  <p>Es claro que \(P\hat{C}Q = 90^\circ \) pues \(\overline{PQ}\) es diametro y \(C\) está sobre la circunferencia. Ahora, 
+    la pregunta mas dificil sería ¿por qué \(R\hat{C}Q = 45^\circ \)? esto se debe a que por teorema de arco capaz, \( R\hat{C}Q = R\hat{P}Q \) 
+y es claro que \( R\hat{P}Q = 45^\circ \) </p>
+
+</div>
+</body>
+</html><!DOCTYPE html>
+<html>

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Página Mariano Negri</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+</head> 
+
+    <body>
+        
+        <!-- Banach 1 -->
+
+        <h2>Hahn-Banach versión real</h2>
+        <p> Sea \(E\) un e.v., \(p:E \rightarrow \mathbb{R}\) función tal que
+            <ul>
+                <li>\( p(x+y) \leq p(x) + p(y) \) para todo \(x,y \in E\)</li>
+                <li>\( p(\lambda x) = \lambda p(x) \), \(x \in E\) y \(\lambda > 0\) </li>
+            </ul>
+        Sea \(G \leq E\) subespacio y sea \(g:G \rightarrow \mathbb{R}\) funcional lineal sobre \(G\) tal que
+        \( g(x) \leq p(x) \) para todo \( x \in E  \). Entonces existe un funcional lineal \(f: E \rightarrow \mathbb{R}\) tal que
+        \(f(x) = g(x)\) para todo \(x \in G\) y \(f(x) \leq p(x) \) para todo \(x \in E\)
+        </p>
+    
+        <button title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler') .style.display=='none') {document.getElementById('spoiler') .style.display=''}else{document.getElementById('spoiler') .style.display='none'}">Mostrar/esconder demostración</button>
+        <div id="spoiler" style="display:none">
+
+        <p><em><b>Demostración</b></em>:</p> 
+        
+        <p>Primero encontramos una candidata a \(f\) por lema de Zorn. Definimos el conjunto:</p>
+        
+        <p> \(\mathcal{P} = \{h:D_h \rightarrow \mathbb{R}: h \text{ es lineal}, G \leq D_h \leq E, h(x) \leq p(x) \text{ para todo } x \in D_h, h|_G \equiv g \} \) </p> 
+    
+        <p>Primero, ¿qué orden parcial podemos darle a este conjunto? Decimos que \(h_1 \leq h_2\) si 
+            <ul>
+                <li>\(D_{h_1} \leq D_{h_2}\)</li>
+                <li>\(h_2|_{D_{h_1}} \equiv h_1\) </li>
+            </ul>            
+        Notemos que este conjunto \(\mathcal{P}\) es no vacio pues \(g \in \mathcal{P}\).
+        </p>
+
+        <p>Sea \( \mathcal{Q} \subseteq \mathcal{P}\) totalmente ordenado. Veamos que tiene cota superior. </p>    
+        <p>Definimos el subespacio (es subespacio porque es una unión de subespacios anidados) \(D_l = \bigcup_{h\in \mathcal{Q}} D_h \) y la función \(l: D_l \rightarrow \mathbb{R} \) como \(l(x) = h(x)\) si \(x \in D(h)\) </p>    
+        <p> Es una función bien definida pues como \(\mathcal{Q}\) está totalmente ordenado, si \(x \in D_{h_1}\) y \(x \in D_{h_2}\) como \(h_1 \leq h_2 \) resulta \(h_1(x) = h_2(x) = l(x)\) </p>
+        <p> Es claramente lineal, además es evidente que \( l(x) \leq p(x)\) para todo \(x \in D_l\).  </p>
+        <p> Por último, \(l|_G \equiv g\), es decir que \(l \in \mathcal{P}\) y es más grande que cualquier elemento \(h \in \mathcal{Q}\) y por lo tanto una cota superior para \(\mathcal{Q}\). </p>
+        <p> Por lema de Zorn existe \(f\) maximal en \(\mathcal{P}\), digamos \(f:D_f \rightarrow \mathbb{R}\). </p>
+        <p> Lo que hay que ver es que \(D_f = E\). Supongamos que por el contrario existe \(x_0 \in E \setminus D_f\). Entonces vamos a definir \(h:D_f \oplus \langle x_0 \rangle \rightarrow \mathbb{R}\) como \(h(x+tx_0) = f(x) + t\alpha \) con \(\alpha\) a determinar. Lo que buscamos es que \(h \in \mathcal{P} \) y así llegar a un absurdo por la maximalidad de \(f\) </p>
+        <p> Es obvio que lo único que hay que buscar para que \(h \in \mathcal{P}\) es que \(h(z) \leq p(z)\) para todo \(z \in D_h\).</p>
+        <p> Es decir, nos gustaria que valga que \(f(x) + t\alpha \leq p(x+t x_0) \) para todo \(x \in D_f\) y \(t\in \mathbb{R}\). En particular si tomamos \(t = \pm 1\) obtenemos que queremos que valga: </p>
+        <p> 
+            <ul>
+                <li>\(f(x) + \alpha \leq p(x+x_0) \Rightarrow \alpha \leq p(x+x_0) - f(x) \)</li>
+                <li>\( f(x) - \alpha \leq p(x-x_0) \Rightarrow \alpha \geq f(x) - p(x-x_0) \) </li>
+            </ul>            
+        </p>  
+        <p> Es decir, como mínimo buscamos \(\alpha\) tal que  \(f(x) - p(x-x_0) \leq \alpha \leq p(x+x_0) - f(x) \)</p> 
+        <p> Primero demostremos que tal \(\alpha \in \mathbb{R} \) existe y luego demostremos que ese \(\alpha \) es suficiente para que valga la condición más general \(f(x) + t\alpha \leq p(x+t x_0) \) para todo \(x \in D_f\) y \(t\in \mathbb{R}\) </p>
+        <p> Consideremos \(S = \text{sup}_{y\in D_f} \{f(y) - p(y - x_0)\} \) e \(I = \text{inf}_{x \in D_f}  \{p(x+x_0) - f(x) \}  \) y veamos que \(S \leq I\) </p>
+        <p> En efecto, para todo \(x,y \in D_f\) tenemos:
+            <div class="ec1">
+            \(
+              \begin{aligned}
+                f(y) + f(x) = f(y+x) \leq p(y+x) = p(y - x_0 + x + x_0) \leq p(y-x_0) + p(x+x_0) \\
+                \iff& f(y) - p(y-x_0) \leq p(x+x_0) - f(x) \text { para todo } x, y \in D_f
+              \end{aligned}
+            \)
+            </div>
+        </p>
+        <p> Por lo tanto \(S \leq I\) y entonces podemos tomar \(\alpha\) tal que \(f(x) - p(x-x_0) \leq S \leq \alpha \leq I \leq p(x+x_0) - f(x) \) para todo \(x \in D_f\).</p>
+        <p> Para terminar la demostración, veamos que esta condición aparentemente más débil de existencia de un \(\alpha\) tal que para todo \(x \in D_f\) vale \(f(x) - p(x-x_0) \leq \alpha \leq p(x+x_0)-f(x)  \) implica la condición aparentemente mas fuerte de que \(f(x) + t\alpha \leq p(x+t x_0) \) para todo \(x \in D_f\) y \(t\in \mathbb{R}\). </p>
+        <p> Primero recordemos que la condición es debil es solamente una equivalencia de tomar \(t = \pm 1\) en la fuerte, es decir de saber que \(f(x) \pm \alpha \leq p(x \pm x_0) \)  </p>
+        <p> Ahora, en efecto, sea \(t > 0\). Entonces: 
+            <div class="ec2">
+                \(\begin{aligned}
+                    f(x) \pm t\alpha = t \Big( f\Big(\frac{x}{t} \Big)  \pm \alpha \Big) \leq \\
+                    t p\Big(\frac{x}{t} \pm x_0 \Big) = \\
+                    p(x \pm t x_0)
+                \end{aligned}\)
+            </div>
+        </p>
+        <p> Esto finaliza la demostración. \( \blacksquare \) </p>
+    </div>
+
+
+    <!-- ---------------- -->
+
+    <br>
+    <hr>
+    <p><em><b>Definición</b></em>: Sea \( (E, \| \cdot \|) \) normado, \( E^* = \{f:E \rightarrow \mathbb{R}: f \text { lineal y continua } \} \) se llama el espacio dual de \(E\). 
+    Notar que \(E^* = \mathcal{L}(E, \mathbb{R}) \) y como \(\mathbb{R}\) es Banach, también es Banach con la norma de \(\mathcal{L}(E, \mathbb{R}) \), es decir \( \| f \|_{E^*} = \sup_{x\in B_E} |f(x)| = \sup_{x\in B_E} f(x)  \) </p> 
+    
+    <br>
+    <hr>
+
+    <p><em><b>Corolario 1 (de Hahn-Banch)</b></em>: \( (E, \| \cdot \|) \), \( G \leq E \) subsepacio. Sea \(g \in G^*\). Entonces
+    existe \(f \in E^*\) que extiende a \(g\) y \( \|f\|_{E^*} = \|g\|_{G^*} \)</p>
+
+    <button title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler1') .style.display=='none') {document.getElementById('spoiler1') .style.display=''}else{document.getElementById('spoiler1') .style.display='none'}">Mostrar/esconder demostración</button>
+    <div id="spoiler1" style="display:none">
+    
+        <p><em><b>Demostración</b></em>: La idea es tomar la función \(p(x) = \|g\|_{G^*} \|x\|_E \) </p>
+        <p> Notemos que esta función cumple que \(g(x) \leq p(x)\) para todo \(x \in G\) y cumple las dos condiciones que tiene que cumplir la función pedida en Hahn-Banach.  </p>
+        <p> Entonces por H-B existe \(f:E \rightarrow \mathbb{R}\) funcional lineal que extiende a \(g\) y tal que \(f(x) \leq p(x) \) para todo \(x \in E\) </p>
+        <p> Esto es, \(f(x) \leq \|g\|_{G^*} \|x\|_E \). Una pequeña observación es que si \(f(x) \leq \|g\|_{G^*} \|x\|_E\) entonces \(f(-x) \leq \|g\|_{G^*} \|-x\|_E = \|g\|_{G^*} \|x\|_E\) y de esta manera \(-f(x) \leq \|g\|_{G^*} \|x\|_E \) con lo cual \( |f(x)| \leq \|g\|_{G^*} \|x\|_E \) </p>
+        <p> Así que \(\frac{|f(x)|}{\|x\|_E} \leq \|g\|_{G^*}\), es decir \(\|f\|_{E^*} \leq \|g\|_{G^*} \), y por otro lado es obvio que \(\|g\|_{G^*} \leq \|f\|_{E^*} \) pues \(f\) extiende a \(g\). Esto concluye la dmeostración \( \blacksquare \)</p>    
+    </div>
+    <hr>
+    <p><em><b>Corolario 2 (de Hahn-Banch)</b></em>: \( (E, \| \cdot \|) \), \( x_0 \in E \). 
+        Entonces existe \(f \in E^*\) tal que \( f(x_0) = \|x_0\|_E^2 \) y \( \| f \|_{E^*} = \|x_0 \|_E \)</p>
+
+        <button title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler2') .style.display=='none') {document.getElementById('spoiler2') .style.display=''}else{document.getElementById('spoiler2') .style.display='none'}">Mostrar/esconder demostración</button>
+        <div id="spoiler2" style="display:none">
+        
+            <p><em><b>Demostración</b></em>: Consideramos \( G = \langle x_0 \rangle_E \) y el funcional \(g: G \rightarrow \mathbb{R}\) definido como \(g(x_0) = \|x_0\|_E^2\) y extendemos por linealidad, es decir \(g(tx_0) = t\|x_0 \|_E\). </p>
+            <p> Notemos que obviamente la norma del operador \(g\) es \( \|g \|_{G^*} = \sup_{t \in \mathbb{R}} \frac{|g(tx_0)|}{\|tx_0 \|_E} = \|x_0\|_E \).   </p>
+            <p> Por el corolario 1 de H-B, existe \(f \in E^*\)  tal que \(f\) extiende a \(g\) y \(\|f\|_{E^*} = \|g\|_{G^*} = \|x_0 \|_E\) \( \blacksquare \)  </p>
+        </div>
+    
+    <hr>    
+    <p><em><b>Versión 2 del corolario 2</b></em>: Existe \(f \in E^*\) tal que \(f(x_0) = \|x_0\|_E\) y \(\|f\|_{E^*} = 1 \). Para una demostración sencilla tomar \(g(x_0) = \|x_0\|_E\) en la demo anterior.  </p>
+    <hr>
+    
+    <p><em><b>Corolario 3 (de Hahn-Banch)</b></em>: Sea \( (E, \| \cdot \|) \), \(x \in E\) fijo. Entonces \( \| x \|_E = \sup_{\substack{f \in E^* \\ \|f \|_{E^*} = 1}  } |f(x)| = \max_{\substack{f \in E^* \\ \|f \|_{E^*} = 1}  } |f(x)| \) </p>
+    
+        <button title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler3') .style.display=='none') {document.getElementById('spoiler3') .style.display=''}else{document.getElementById('spoiler3') .style.display='none'}">Mostrar/esconder demostración</button>
+        <div id="spoiler3" style="display:none">
+        <p><em><b>Demostración</b></em>: La demostración es basicamente usar la versión 2 del corolario 2. Veamos como. </p>
+        <p> Sea \(f\) como en el enunciado. Tenemos \( |f(x)| \leq \|f\|_{E^*} \|x\|_E \leq \|x\|_E \) pues \(\|f\|_{E^*} = 1 \) según como estamos tomando \(f\) </p>
+        <p> Por lo tanto tomando supremo, \(\sup_{\substack{f \in E^* \\ \|f \|_{E^*} = 1}} |f(x)| \leq \|x\|_E \)  </p>
+        <p> Pero recordemos que en la versión 2 del corolario 2 vimos que existe \(f \in E^*\) tal que \(f(x) = \|x\|_E\) y \( \|f \|_{E^*} = 1 \). Esto nos da la otra desigualdad \(\sup_{\substack{f \in E^* \\ \|f \|_{E^*} = 1}} |f(x)| \geq \|x\|_E \)</p> 
+        <p> Pero no solo eso, como se realiza podemos cambiar el supremo por máximo obteniendo \( \|x\| = \max_{\substack{f \in E^* \\ \|f \|_{E^*} = 1}} |f(x)| \). \(\blacksquare\)   
+        </div>
+
+    <hr>    
+
+    <p><em><b>Observación</b></em>: consideramos la inclusión canónica \(J_E:E \rightarrow (E^*)^*\) que es \( x \mapsto \hat{x}(f) := f(x) \)  </p>
+    <p> Notemos que \( \| \hat{x} \|_{E^{**}} = \sup_{\|f\|_{E^*} = 1} | \hat{x}(f) | = \sup_{\|f\|_{E^*} = 1} |f(x)| = \| x \| \) </p>    
+    <p> Nos preguntamos si esta inclusión es sobreyectiva, es decir, si dado \(f \in E^*\), existe \(x \in E\) tal que \(|f(x)| = \|f\|_{E^*} = \sup_{\|x\|_E = 1} |f(x)|\) </p>
+    <p> La respuesta es que no. Un ejemplo es \( E = \{\mu \in C[0,1]: \mu(0) = 0  \}\) con la norma \(\|\mu\|_E = \max_{t \in [0,1]} |\mu(t)| \)</p>
+    <p style="color:red;"> <em><b>Demostración:</b></em>: TODO </p>        
+
+    <hr>
+    
+    <p style="color:red;"> <em><b>Otro ejemplo:</b></em>: \( L_1(\mathbb{R}) \rightarrow (L_1(\mathbb{R})^*)^* = L_\infty(\mathbb{R})^* \) no es surjectiva TODO </p>        
+
+    <hr>
+
+    <h2>Hahn-Banach geométrico</h2>
+    
+    <p><em><b>Definición</b></em>: Sean \(A,B \subseteq E\) convexos nos vacíos y disjuntos. Decimos que \( [f = \alpha]\) con \(f\in E^*\) separa \(A\) y \(B\) si existe \(\alpha\) tal que \(f(x) \leq \alpha\) para todo \(x \in A \) y \(f(x) \geq \alpha \) para todo \(x \in B\).  </p>
+    <p> Decimos que separa estrictamente si existe \(\epsilon > 0 \) tal que \(f(x) \leq \alpha - \epsilon\) para todo \(x \in A\) y \(f(x) \geq \alpha + \epsilon\) para todo \(x \in B\)</p>    
+
+    <hr>
+    <em><b>Teorema (H-B geométrico)</b></em>: Sea \( (E, \| \cdot \|) \). Sean \(A,B \subseteq E\) convexos no vacíos y disjuntos. Si alguno de los dos es abierto, entonces existe un hiperplano cerrado que separa \(A\) de \(B\). 
+    
+    <p> <b> Antes de demostrar el teorema probamos dos lemas preparatorios.</b></p>
+    
+    <p><em><b>Lema 1:</b></em> Sea \(C \subseteq E\) abierto convexo tal que \(0 \in C\). Definimos \(p:E \rightarrow \mathbb{R}_{\geq 0}\) como: </p>
+    <p>\(p(x) = \inf \{ \alpha > 0: \frac{x}{\alpha} \in C \}\). Entonces \(p\) verifica:</p>
+    <ol>
+        <li> \( p(\lambda x) = \lambda p(x) \) para todo \(\lambda > 0\) </li>
+        <li> \( p(x+y) \leq p(x) + p(y) \) </li>
+        <li> \( p(x) \leq M\|x\|\) para cierto \(M > 0\)  </li>
+        <li> \( C = \{x \in E: p(x) < 1 \} \) </li>
+    </ol>
+    <button title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler4') .style.display=='none') {document.getElementById('spoiler4') .style.display=''}else{document.getElementById('spoiler4') .style.display='none'}">Mostrar/esconder demostración</button>
+    <div id="spoiler4" style="display:none">
+        <ol>
+            <li> \(p(\lambda x) = \inf \{ \alpha > 0: \frac{\lambda x}{\alpha} \in C \} = \lambda \underbrace{\inf \{\frac{\alpha}{\lambda} > 0: \frac{x}{\frac{\alpha}{\lambda}} \in C \}}_{p(x)} = \lambda p(x)\) </li>
+            <li> <p> Sean \(x,y \in E\). Entonces \(\frac{x}{p(x)+ \epsilon} \in C\) y \(\frac{y}{p(y)+ \epsilon} \in C\) para todo \(\epsilon > 0 \) por la definición de \(p\) </p>  
+                <p> Como \(C\) es convexo, tenemos que \( t\frac{x}{p(x)+ \epsilon} + (1-t)\frac{y}{p(y)+ \epsilon} \in C \) para todo \(t \in [0,1]\)</p>
+                <p> Ahora tomamos \(t := \frac{p(x) + \epsilon}{p(x)+p(y)+2\epsilon}\)</p>
+                <p> Si hacemos la cuenta con este \(t\), obtenemos \( t\frac{x}{p(x)+ \epsilon} + (1-t)\frac{y}{p(y)+ \epsilon} = \frac{x+y}{p(x)+p(y)+2\epsilon} \in C \)  </p>
+                <p> Por definición de \(p\) esto nos dice que \(p(x+y) \leq p(x) + p(y) + 2\epsilon\) para todo \(\epsilon > 0\) lo cual concluye la prueba.
+            </li>
+            <li> Como \(0 \in C\) y \(C\) es abierto, entonces existe \(r>0\) tal que  \(\overline{B_r}(0) \subseteq C\). Notemos que \( \|\frac{x}{\frac{\|x\|}{r}} \| = r \), por lo tanto \( \frac{x}{\frac{\|x\|}{r}} \in \overline{B_r}(0) \subseteq C \) y luego \(p(x) = \frac{1}{r}\|x\| \). Simplemente tomamos \(M = \frac{1}{r}\) </li>
+            <li> Sea \(x \in C\). Como \(C\) es abierto existe \(\epsilon>0\) tal que \((1+\epsilon)x \in C\). Esto es lo mismo que decir que \(\frac{x}{\frac{1}{1+\epsilon}} \in C\) y luego por la definición de \(p\) tenemos que \(p(x) \leq \frac{1}{1+\epsilon} < 1 \). 
+            Ahora, como \(x \in C\) esto nos dice que \(p(x) < 1\), es decir \(C \subseteq \{ x: p(x) < 1 \} \). Para ver la otra inclusión, si \(p(x) < 1\), por definición existe \(0 \leq \alpha \leq 1\) tal que \(\frac{x}{\alpha} \in C\).
+            Notemos que \(x = \alpha \frac{x}{\alpha} + (1-\alpha)0 \) y por convexidad de \(C\), esto indica que \(x \in C\), por lo tanto vimos la otra inclusión y esto concluye la prueba.      
+            </li>
+        </ol>
+        \(\blacksquare\)
+    </div>    
+
+    <p><em><b>Lema 2:</b></em> Sea \(C \subseteq E\) abierto convexo no vacío. Sea \(x_0 \in E \setminus C\). Entonces existe \(f \in E^*\) tal que \(f(x) < f(x_0)\) para todo \(x \in C\). En particular, \([f=f(x_0)]\) separa a \(C\) y \(\{x_0\}\)  </p> 
+    <button title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler5') .style.display=='none') {document.getElementById('spoiler5') .style.display=''}else{document.getElementById('spoiler5') .style.display='none'}">Mostrar/esconder demostración</button>
+    <div id="spoiler5" style="display:none">
+        <p> En primer lugar, veamos que podemos suponer s.p.d.g. que \(0 \in C\) para usar el lema anterior.</p>
+        <p> Consideramos \(\hat{C} = C - y\) con \(y \in C\), entonces \(y - y = 0 \in \hat{C}\) y consideramos \(\hat{x_0} = x_0 - y\). Debemos ver que si existe \(f\) tal que \([f = f(x_0)]\) separa a \(C\) y \(\{x_0\}\), entonces \([f = f(\hat{x_0})]\) separa a \(\hat{C}\) y \(\{\hat{x_0}\}\). </p>
+        <p> En efecto, sea \(\hat{x} \in \hat{C}\), es decir \(x-y\) con \(x \in C\). Entonces veamos que \( f(\hat{x}) < f(\hat{x_0}) \).</p>
+        <p> Esto no es más que hacer la cuenta: \(f(\hat{x}) = f(x-y) = f(x) - f(y) < f(x_0) - f(y) = f(x_0 - y) = f(\hat{x_0}) \). Esto demuestra que podemos suponer que \(0 \in C\). </p>
+        <p> Ahora usemos el \(p\) del lema anterior. Sea \(G = \langle x_0 \rangle \leq E\) y consideramos el funcional lineal \(g(tx_0) = t\). Entonces \(g(tx_0) = t \leq p(tx_0)\) pues hay dos casos </p>
+        <p> <ul>
+                <li> Si \(t > 0\) entonces \(t \leq tp(x_0) \) (como \(x_0 \not\in C \) entonces \(p(x_0) \geq 1\) )  </li>
+                <li> Si \(t \leq 0 \) entonces \(t \leq \underbrace{p(tx_0)}_{\geq 0}\)</li>
+            </ul>
+        </p>
+        <p> Por H-B, existe \(f\) funcional \(f|_G = g\) y \(f(x) \leq p(x)\). Además, por (3) del lema anterior tenemos que \(f(x) \leq p(x) \leq M\|x\|\) y tomando \(-x\) como ya hicimos en el corolario 1 de H-B obtenemos que \(|f(x)| \leq M \|x\| \). Luego \(\|f\|_{E^*} \leq M\) y por lo tanto \(f\) es continua, luego \(f \in E^*\).  </p>
+        <p> Si \(x \in C\) tenemos que \(p(x) < 1\) por (4) del lema anterior. Luego \(f(x) \leq p(x) < 1 = f(x_0)\). </p>
+        <p> Es decir, \( [f = f(x_0)] \) separa \(C\) de \(\{x_0\}\) \(\blacksquare\)</p>
+    </div>
+
+    <p><b> Ahora si, vamos a demostrar el enunciado de H-B geométrico </b></p>
+    <button title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler6') .style.display=='none') {document.getElementById('spoiler6') .style.display=''}else{document.getElementById('spoiler6') .style.display='none'}">Mostrar/esconder demostración de H-B geométrico</button>
+    <div id="spoiler6" style="display:none">
+        <p> Consideremos \(C:= A- B = \{a - b: a \in A, b \in B \} \). Notemos que \(C\) es convexo pues \(t(a_1 - b_1) + (1-t)(a_2 - b_2) = \underbrace{ta_1 + (1-t)a_2}_{\in A} - \underbrace{tb_1 + (1-t)b_2}_{\in B} \in A-B\) </p>
+        <P> Hagamos la observación que usaremos luego de que \(0 \not \in C\), pues \( A \cap B = \emptyset \)  </P>
+        <p> Ahora vemoas que \(A-B\) es abierto. S.p.d.g. supongamos que \(A\) es abierto. Entonces \(A-B = \cup_{b \in B} A-b\) es una unión de abiertos, luego es abierto.   </p>
+        <p> Por el lema anterior, existe un hiperplano que separa \(A-B\) del \(\{0\} \not \in C\). Es decir, existe \(f \in E^*\) tal que \(f(z) < f(0) = 0\) para todo \(z \in A-B\)</p>
+        <p> Esto significa que para todo \(a \in A\) y todo \(b \in B\) tenemos que \(f(a-b) < 0\) o lo que es lo mismo \(f(a) < f(b) \). </p> 
+        <p> Elegimos \(\alpha\) en el intervalo \([\sup_{a\in A} f(a), \inf_{b\in B} f(b)]\) y obtuvimos \([f = \alpha]\) hiperplano cerrado que separa a \(A\) y \(B\). \(\blacksquare\)
+    </div>
+
+    <hr>
+
+    <p> Ahora veamos cuando podemos separarlos estrictamente, para esto vamos a usar H-B geométrico mas algunas hipótesis adicionales sobre los conjuntos en cuestion. </p>
+
+    <p><em><b>Teorema:</b></em> Sean \(A,B \subseteq E\) convexos no vacios disjuntos. Supongamos que \(A\) es cerrado y \(B\) es compacto. Entonces existe un hiperplano cerrado que los separa estrictamente. </p>
+    <button title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler7') .style.display=='none') {document.getElementById('spoiler7') .style.display=''}else{document.getElementById('spoiler7') .style.display='none'}">Mostrar/esconder demostración</button>
+    <div id="spoiler7" style="display:none">
+        <p> Recordemos, lo que finalmente queremos ver es que existen \(\alpha\), \(\epsilon > 0\) y \(f \in E^*\)  tales que para todo \(x \in A, y \in B\) vale: </p>    
+        <p> <ul>
+                <li> \(f(x) \leq \alpha - \epsilon\)</li>
+                <li> \(f(y) \geq \alpha + \epsilon\)</li>
+            </ul> 
+
+
+        <p> Empecemos. Sea \(\epsilon > 0 \). Consideramos \(A_\epsilon = A + B_\epsilon(0)\) y \(B_\epsilon = B + B_\epsilon(0) \). Son conjuntos convexos y abiertos. </p>
+        <p> Veamos que si \(\epsilon\) es lo suficientemente chico entonces \(A_\epsilon \cap B_\epsilon = \emptyset\).</p>
+        <p> En caso contrario, existe un sucesión \(\epsilon_n \rightarrow 0\) tal que \(z_n \in A_{\epsilon_n} \cap B_{\epsilon_n}\). </p>
+        <p> Tenemos que \(z_n\) se puede escribir como \(z_n = x_n + \epsilon_n \hat{x}_n\) y como \(z_n = y_n + \epsilon_n \hat{y}_n\) con \(x \in A, y \in B\) y \(\hat{x}_n, \hat{y}_n \in B_1(0)\)
+        <p> Ahora, como \(A\) es compacto existe una subsucesión \(x_{n_k}\) tal que \(x_{n_k} \rightarrow x \in A\). Por otro lado, \(\| x_{n_k} - y_{n_k} \| \leq \|x_{n_k} - z_{n_k} \| + \| y_{n_k} - z_{n_k}\| = 2\epsilon_{n_k} \rightarrow 0 \) </p>
+        <p> Pero entonces \( \| x - y_{n_k} \| \leq \underbrace{\| x - x_{n-k}\|}_{\rightarrow 0} + \underbrace{\|x_{n_k} - y_{n_k}\|}_{\rightarrow 0} \rightarrow 0 \). Es decir, \(y_{n_k} \rightarrow x\) y como \(B\) es cerrado tenemos que \(x \in B\), es decir \(x \in A \cap B = \emptyset\), absurdo. </p>
+        <p> Una vez hecha esta pequeña digresión sobre que existe un \(\epsilon\)  pequeño tal que \(A_\epsilon \cap B_\epsilon = \emptyset\), por teorema de H-B geométrico existe \(f\in E^*\) tal que separa a \(A_\epsilon\) de \(B_\epsilon\). Es decir, concretamente: </p>
+        <p> \(f(x + \epsilon z_1) \leq f(y+ \epsilon z_2) \) para todo \(x \in A, y \in B\) y para todo \(z_1, z_2 \in B_1(0)\).   
+        <p> Luego \( f(x) + \epsilon f(z_1) \leq f(y) + \epsilon f(z_2) \). Ahora, como \(\|z_1\| = \|z_2\| = 1\) y la desigualdad vale para todo \(z_1,z_2 \in B_1(0)\) seguro de la desigualdad anterior se sigue:  </p>
+        <p> \( f(x) + \epsilon \underbrace{\|f\|_E}_{\sup_{z_1 \in B_1(0)} f(z_1)} \leq f(y) + \epsilon \underbrace{-\|f\|_E}_{\sup_{z_2 \in B_1(0)} f(z_2)} \)</p>    
+        <p> Ahora, sea \(\alpha\) tal que \( f(x) + \epsilon \|f\|_E \leq \alpha \leq f(y) - \epsilon\|f\|_E \) entonces \([f=\alpha]\) separa estrictamente a \(A\) y \(B\), es decir, tenemos que para todo \(x \in A, y \in B\) vale: </p>    
+        <p> <ul>
+                <li> \(f(x) \leq \alpha - \epsilon\|f\|\)</li>
+                <li> \(f(y) \geq \alpha + \epsilon\|f\|\)</li>
+            </ul> 
+        \(\blacksquare\)
+        </p>    
+    </div>
+
+    <hr>
+
+    <p><em><b>Corolario (REVISAR):</b></em> \( M \leq E \), \(\overline{M} \neq E\). Entonces existe \(f \in E^*\) tal que \(f \neq 0\) implica \(f|_M = 0\). </p>    
+    <button title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler8') .style.display=='none') {document.getElementById('spoiler8') .style.display=''}else{document.getElementById('spoiler8') .style.display='none'}">Mostrar/esconder demostración</button>
+    <div id="spoiler8" style="display:none">
+        <p> Sea \(x_0 \in E \setminus \overline{M} \).</p>
+        <p> \(\overline{M}\) es un subespacio cerrado, el hecho de ser subespacio también lo convierte automaticamente en convexo. Además \(\{x_0\}\) es obviamente un compacto. </p>
+        <p> Por la versión de H-B geométrico que demostramos en el teorema anterior, tenemos que podemos separarlos estrictamente. Es decir existen \(f \in E^*\) y \(\alpha\) tales que \(f(x) < \alpha < f(x_0)\) para todo \(x \in \overline{M}\).  </p>
+        <p> Ahora, supongamos que \(f \neq 0 \). Supongamos que \(f|_M \neq 0\) para llegar a un absurdo. Entonces tenemos que \(\alpha > 0\) pues sea \(f(y) \neq 0\)  con  \(y \in M\). Tenemos que \(f(y) < \alpha\). Si \(f(y) > 0\) listo. Si no tomamos \(-y \in M\) y tenemos que \(0 < f(-y) < \alpha \) y listo.</p>
+        <p> Ahora sea \(x \in M\), tenemos que para todo \(\lambda \in \mathbb{R}\), \(f(\lambda x) = \lambda f(x) \leq 0 < \alpha \). Pero entonces \(f(x) = 0\), es decir \(f|_M = 0\), absurdo. Luego \(f|_M = 0\). \(\blacksquare\) </p>
+    </div>  
+    
+    <p><em><b>(REVISAR):</b></em>De esto se desprende que si existe \(f \in E^*\) tal que \(f|_M = 0\) implica \(f = 0\), entonces \(M\) es denso.</p>
+    
+    <hr>
+   
+    <p style="color:red;"> <em><b>TODO:</b></em>: Complemento topológico </p>        
+
+    <hr>
+    
+    <h2>Hahn-Banach versión compleja</h2>
+
+    <p><em><b>Observación:</b></em> Sea \(X\) un E.V. sobre \(\mathbb{C}\), entonces: </p>
+    <p> <ol>
+            <li> \(X\) es un \(\mathbb{R}\) e.v </li>
+            <li> Si \(f:X \rightarrow \mathbb{C}\) es \(\mathbb{C}\)-lineal, entonces \(\text{Re}(f):X\rightarrow \mathbb{R} \) es \(\mathbb{R}\)-lineal (por definición \(\text{Re}(f)(x) := \text{Re}(f(x)) \)) </li>
+        </ol>
+    </p>
+    
+    <p><em><b>Lema:</b></em> Sea \(X\) un \(\mathbb{C}\)-e.v.</p>
+    <p><ol>
+            <li> Si \(f:X \rightarrow \mathbb{R}\) es \(\mathbb{R}\)-lineal entonces \(\hat{f}:X \rightarrow \mathbb{C} \) definida como \( \hat{f}(x) = f(x) - if(ix)\) es \(\mathbb{C}\)-lineal y \( \text{Re}(\hat{f}) = f\)    </li>
+            <li> Si \(g:X \rightarrow \mathbb{C}\) y \(f = \text{Re}(g)\) entonces \(\hat{f} = g\). En particular \(g(x) = \text{Re}(g(x)) - i \text{Re}(g)(ix)\).  </li>
+            <li> Sea \(p:X \rightarrow \mathbb{R}\) es seminorma en \(X\), es decir cumple que \(p(x+y) \leq p(x) + p(y) \) y \(p(\lambda x) = |\lambda|p(x)\) todo \(\lambda \in \mathbb{C}\). Entonces se cumple: <p>\(f:X \rightarrow \mathbb{R}\) función \(\mathbb{R}\)-lineal y \(|f(x)| \leq p(x)\) para todo \( x \in X \) \(\iff\) \(|\hat{f}(x)| \leq p(x)\) para todo \(x \in X\) </p> </li>
+            <li> \(\|f\| = \|\hat{f}\|\)</li>
+        </ol>
+    </p>
+    <button title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler9') .style.display=='none') {document.getElementById('spoiler9') .style.display=''}else{document.getElementById('spoiler9') .style.display='none'}">Mostrar/esconder demostración</button>
+    <div id="spoiler9" style="display:none">
+    <p><em><b>Demostración:</b></em> </p>
+    <p>
+    <ol>
+        <li> Ejercicio</li>
+        <li> Ejercicio</li>
+        <li> <p> \(\Rightarrow\) ) Sea \(x \in X\). Podemos escribir a \(\hat{f}(x)\) como \(\hat{f}(x) = e^{i\theta} | \hat{f} (x) | \) para algún \(0 \leq \theta < 2\pi\). Simplemente despejando tenemos que \( \underbrace{|\hat{f}(x)|}_{\in \mathbb{R}} = e^{-i\theta} \hat{f}(x) = \underbrace{\hat{f}(e^{-i\theta}x)}_{\in \mathbb{R}}  = \text{Re}(\hat{f}(e^{-i\theta}x)) \underbrace{=}_{(1)} f(e^{-i\theta}x) \leq p(e^{i\theta}x) = |e^{i\theta}|p(x) = p(x) \)   </p>
+        <p> Es decir \(| \hat{f} (x) | = p(x) \) como queriamos probar</p>
+        <p> \(\Leftarrow)\) Supongamos que \(|\hat{f}(x)| \leq p(x) \) para todo \(x \in X\). Entonces \(f(x) = \text{Re}(\hat{f}(x)) \leq |\hat{f}(x)| \leq p(x)\)   </p>
+        <p> Por otro lado, \(-f(x) = f(-x) \leq p(-x) = |-1|p(x) = p(x) \), por lo tanto \( |f(x)| \leq p(x) \)</p>
+        </li>
+        <li> Ejercicio</li>    
+    </ol>
+    </p>
+    </div>
+ 
+    <p><em><b>Corolario:</b></em> Sea \(X\) un \(\mathbb{F}\)-e.v. y \(M \leq X\). Sea \(p:X \rightarrow [0, +\infty) \) seminorma. Si \(f:M \rightarrow \mathbb{F}\) es lineal y \(|f(x)| \leq p(x) \) para todo \(x \in M\) entonces existe \(F: X \rightarrow \mathbb{F} \) lineal y \( |F(x)| \leq p(x) \) para todo \(x \in X\)</p>
+    <button title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler10') .style.display=='none') {document.getElementById('spoiler10') .style.display=''}else{document.getElementById('spoiler10') .style.display='none'}">Mostrar/esconder demostración</button>
+    <div id="spoiler10" style="display:none">
+        <p><em><b>Demostración:</b></em> Primero hagamoslo en el caso de que \( \mathbb{F} = \mathbb{R} \). </p>    
+        <p> Tenemos que \( f(x) \leq |f(x)| \leq p(x) \) para todo \(x \in M\) por H-B existe \(F:X \rightarrow \mathbb{R}\) que extiende a \(f\) y \(F(x) \leq p(x)\) para todo \(x\in X\). </p>
+        <p> Ahora haciendo la cuenta tenemos  \(-F(x) = F(-x) \leq p(-x) = |-1|p(x) = p(x) \). Por lo tanto \(|F(x) \leq p(x) \). </p>
+        <p> Si en cambio \( \mathbb{F} = \mathbb{C} \) tenemos \(\text{Re}(f):M \rightarrow \mathbb{R}\) es \(\mathbb{R}\)-lineal. Tenemos \(|\text{Re}(f)(x)| \leq |f(x)| \leq p(x) \). </p>
+        <p> Luego existe \(F_1:X \rightarrow \mathbb{R}\) que es \(\mathbb{R}\)-lineal  que extiende a \(\text{Re}(f)\) y \(|F_1(x)| \leq p(x) \) para todo \(x \in X\) </p>
+        <p> Consideremos \(F := \hat{F_1}\), es decir \(F(x) = F_1(x) - iF_1(ix)\). Entonces por la parte (3) del lema anterior tenemos \( |F(x)| \leq p(x) \) </p>
+        <p> Ahora veamos que \( F|_M = f(x)\). Sea \(x\in M\). Entonces \(F(x) = F_1(x) - iF(ix) \underbrace{=}_{(2)} \text{Re}(f)(x) - i Re(f)(ix) = f(x)\). Luego \(F|_M = f\) \(\blacksquare\) </p>
+    </div>
+
+</body>    
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Página Mariano Negri</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+</head> 
+
+<body>
+
+<h2> Ejercicio </h2>
+
+<p> Supongamos que tenemos el cuadrilatero \(ABCD\) como muestra la figura abajo, y sea \(M\) la intersección entre las diagonales \(\overline{AC}\) y \(\overline{BD}\). Si se sabe que \(\overline{AB} = \overline{AM} = \overline{DM} = \overline{CD} = y\), que \(\angle BAM = \angle MAD = \alpha \) y llamamos \(\overline{BM} = x \), entonces:</p>
+<p> a) mostrar que \(y/x = \Phi \)</p>
+<p> b) Si \(\overline{AD} = 3\), calcular \(y\). Si \(O\) es el centro de la circunferencia, ¿cuánto vale \( \overline{OM} \)? ¿Cual es el área y perímetro de la figura?  </p>
+
+<br>
+
+<img src="problemas aureo/p1.png" alt="pdc">
+
+<br>
+
+<p><b>Posible pista:</b> Ver que el triángulo \(ABM\) es semejante al triángulo \(ACD\). Concluir que \(2\alpha = \beta\). </p> 
+ 
+
+<em><b>Solución: </b></em> a)
+
+<p>Lo que vamos a ver es que el triángulo \(ABM\) es semejante al triángulo \(ACD\) y luego trataremos de concluir lo que se pide en base a esta semejanza.</p>
+ 
+<p>Como \(\overline{AM} = \overline{MD}  \) tenemos que el triángulo \(AMD\) es isosceles y por lo tanto \(\angle MDA = \alpha = \angle BDA\). </p>
+<p>Por arco capaz con la cuerda \(\overline{BC}\), tenemos que \(\angle BAC = \angle BDC = \alpha \).</p>
+<p>Por arco capaz con la cuerda \(\overline{BA}\) tenemos que \(\angle BDA = \angle BCA = \alpha \).</p>
+<p>Por arco capaz con la cuerda \(\overline{CD}\) tenemos que \(\angle CAD = \angle CBD = \alpha \).</p>
+<p> Notemos que entonces que \( \angle CBD = \angle BCA = \alpha \) y por lo tanto el triángulo \(BMC\) es isosceles, tenemos que \( \overline{BM} = \overline{CM} = x\).  </p>
+<p> Ahora, el triángulo \(ABM\) es isosceles y es congruente al triángulo \(MDC\) por LLL. Entonces llamemos \(\angle ABM = \angle AMB = \angle DMC = \angle DCM = \beta \). </p>
+<p> Todo esto queda ilustrado en la siguiente figura:</p>  
+
+<br>
+
+<img src="problemas aureo/p12.png" alt="pdc">
+
+<br>
+
+<p>Pero notemos que ahora tenemos que en el triángulo \(ABM\) y en el triángulo \(ACD\) hay dos pares de ángulos iguales, \(\angle BAM = \angle CAD = \alpha\) y \(\angle ABM = \angle ACD = \beta \), automaticamente esto nos dice que el tercer ángulo tambien es igual. O sea, de hecho \(\beta = 2\alpha\) como muestra la figura. </p>
+
+<br>
+
+<img src="problemas aureo/p13.png" alt="pdc">
+
+<br>
+
+<p>Para concluir tenemos dos opciones. Notemos que por semejanza tenemos \(\overline{AC}/\overline{CD} = \overline{AB}/\overline{BM} \) es decir, \( (y+x)/x = y/x \). Pero esto es exactamente que \(x\) e \(y\) cumplan la razón aurea. Es decir \(y/x = \Phi\)</p>
+ 
+<p>Otra forma de concluir sería notar que como \(\beta = 2\alpha\) entonces en el triángulo \(BAM\) tenemos que \( \alpha + \underbrace{\beta}_{=2\alpha} + \underbrace{\beta}_{=2\alpha} = 5\alpha = 180^\circ \) con lo cual \(\alpha = 36^\circ\) y por lo tanto \(AMB\) es un triángulo dorado, luego \(y/x = \Phi\).</p>
+
+<p>b) Tenemos que el triángulo \(AMD\) es un triángulo plateado. Recordemos que en un triangulo plateado, si la base es \((\Phi+1) \cdot a \) entonces los lados iguales son \(\Phi \cdot a \).  </p>
+<p> En particular, sabemos en este caso que \(3 = (1+\Phi) \cdot a\) y por lo tanto \(a = 3/(1+\Phi) \) y por lo tanto \( y = 3 \Phi /(1+\Phi) \). Como \(y/x = \Phi \), tenemos que \(x = 3/(1 + \Phi) \)</p>
+
+
+<h2> Ejercicio </h2>
+
+
+<p> Sea \( \triangle ABC \) un triángulo equilátero inscripto en una circunferencia. Sean \(E\) y \(D\) los puntos medios de \(\overline{CB}\) y \(\overline{CA}\) respectivamente. Consideremos la recta que pasa por el segmento \( \overline{DE} \) y consideremos \(F\) y \(G\) las intersecciones de esta recta con la circunferencia.  Entonces: </p>
+<p>a) Ver que \(\overline{FD} = \overline{EG}\) </p>
+<p>b) Ver que \(\frac{\overline{DE}}{\overline{EG}} = \Phi\)</p>
+<br>
+
+<img src="problemas aureo/p2.png" alt="pdc">
+
+<br>
+
+<p><b>Solución: </b> </p>
+<p> a)Notemos primero que el triángulo \( \triangle CDE \) es isósceles con un ángulo de \(60^\circ\) pues \( \overline{CE} = \overline{CD} \) y \(\angle DCE = 60^\circ \), por lo tanto \(\triangle CDE \) es equilátero. </p>
+<p>Luego tenemos \(\overline{CE} = \overline{DE} = \overline{CD} = \overline{EB} = \overline{DA} \). </p>
+<p> Ahora usamos teoremas de las cuerdas con las cuerdas \(\overline{CA}\) y \(\overline{FG}\) y con \(\overline{CB}\) y \(\overline{FG}\). </p>
+<p> Obtenemos dos ecuaciones: \( FD \cdot DG = CD \cdot DA = DA^2 \) y \(FE \cdot EG = CE \cdot EB = DA^2 \) </p>  
+<p> Podemos igualar para obtener \(FD \cdot \underbrace{DG}_{DE + EG} = \underbrace{FE}_{FD + DE} \cdot EG \). </p>
+<p> En definitiva, obtuvimos que  \(FD \cdot (DE + EG) = (FD + DE) \cdot EG \) y distribuyendo esto es lo mismo que \( FD \cdot DE + FD \cdot EG = FD \cdot EG + DE \cdot EG \). </p>
+<p> Finalmente, esto último nos dice que \( FD \cdot DE = DE \cdot EG \), es decir \(FD = EG\) como queriamos.
+<p> Obtenemos que la figura es: </p>
+
+<br>
+
+<img src="problemas aureo/p21.png" alt="pdc">
+
+<br>
+
+<p> b) Basta ver que \(\frac{\overline{DE}}{\overline{EG}} = \frac{\overline{DE}+\overline{EG}}{\overline{DE}}\).</p>  
+<p> Por el teorema de las cuerdas sabemos que \( \overline{FE} \cdot \overline{EG} = \underbrace{\overline{CE} \cdot \overline{EB}}_{ \overline{DE}^2} \). </p>
+<p> Tenemos \(\overline{FE} = \underbrace{\overline{FD}}_{=\overline{EG}} + \overline{DE} = \overline{EG} + \overline{DE} \).</p> 
+<p> Por lo tanto tenemos \( (\overline{EG} + \overline{DE}) \cdot \overline{EG} = \overline{DE}^2 \) o lo que es lo mismo \(\frac{\overline{EG} + \overline{DE}}{\overline{DE}}  = \frac{\overline{DE}}{\overline{EG}} \) como queríamos. </p>
+ 
+</body>    
+</html>

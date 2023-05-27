@@ -14,6 +14,34 @@
 <body>
 
   <h2> Ejercicio </h2>
+  
+  <p> Sea \(\mathcal{C}\) la circunferencia de la figura, donde \(O\) es su centro, \(\angle ABO = 55^\circ \) y \(\angle ACO = 23\) </p>
+  
+  <br>
+  
+  <img src="Problemascuerdas/p2.png" alt="p4b">
+  
+  <br>
+   
+     Hallar el ángulo \(\angle BDC\) 
+    <!--<li> (Hacer mismo ejercicio con 55 y 35 en vez de 33) Si \(\overline{BC} = 3\), calcular el circunradio del triángulo \(ABC\) y hallar \(\overline{OD}\) </li>-->
+  
+
+  <br>
+
+<details > <summary> Esconder/mostrar solución</summary>
+<b> Solución: </b>
+    <p>Observemos la cuerda \(\overline{BC}\). Primero que nada el angulo central \(\angle BOC = 2\alpha\) para algún \(\alpha\) a determinar.</p> 
+    <p>Por otro lado miremos la misma cuerda \(\overline{BC}\). Sabemos que si el ángulo centrla es \(2\alpha\) entonces \( BAC = \alpha \). </p>
+    <p>Ahora, los ángulos \( \angle ADB =  \angle ODC \) son iguales por ser opuestos por el vértice, llamemoslos \(\beta\) </p>
+    <p>Finalmente tenemos un sistemita de 2 ecuaciones 2 incognitas fácil de resolver porque los angulos internos de los triángulos \(ADB\) y \(DOC\) suman \(180^\circ\) </p>
+    <p> Es decir, tenemos la ecuación \(\alpha + \beta + 55^\circ = 180^\circ\) para el triángulo \(ADB\), y la ecuacion  \(2\alpha + \beta + 23^\circ = 180^\circ\) para el triángulo \(ODC\) </p>
+    <p> Si resolvemos este sistema tenemos que \(\alpha + 23^\circ - 55^\circ = 0^\circ \) es decir \(\alpha = 32^\circ\) y luego \(\beta = 93^\circ\). </p>
+    <p> Finalmene tenemos que  \(\angle BDC = 180^\circ - \beta = 77^\circ\).  </p> 
+      
+</details>
+
+  <h2> Ejercicio </h2>
 
   <p>Consideremos la circunferencia \(\mathcal{C}\) de la figura, de centro \(O\). Se sabe que \(\overline{AC} = \overline{CB} = 3\) y \(\angle AOB = 144^\circ \). Entonces: </p>
   
@@ -29,6 +57,46 @@
     <li> Calcular el área del cuadrilatero \(ACBD\) </li>
   </ol>  
   
+  <details > <summary> Esconder/mostrar solución</summary>
+  
+  <b> Solución: </b> 
+
+  <ol> 
+    <li> <p>Notemos que el ángulo central es \(144^\circ\), y luego \(ADB = 144^\circ/2 = 72^\circ\). Por lo tanto \(\angle ACB = 180^\circ-72^\circ = 108^\circ\). </p>
+      <p> Como además el triángulo \(ACB\) es isosceles, tenemos sus ángulos internos son \(108^\circ-36^\circ-36^\circ\), o sea que es un triángulo plateado.</p>
+      <p> Entonces, al ser plateado, sabemos que \(\frac{\overline{AB}}{\overline{CB}} = \Phi \), resulta que \( \overline{AB} = \underbrace{\overline{CB}}_{=3} \cdot \Phi = 3\Phi \). </p>
+      <p> Para hallar el radio, hallemos \(\overline{OB}\). Hay muchas formas de hacerlo. Podemos usar teorema del seno en el triángulo isóceles \(OAB\) de ángulo internos \(144^\circ-18^\circ-18^\circ\).   </p>
+      <p> Tenemos que \( \frac{\overline{AB}}{\text{sin}(144^\circ)} = \frac{\overline{OB}}{\text{sin}(18^\circ) }  \) es decir \(\overline{OB} = 3\Phi \frac{\text{sin}(18^\circ)}{\text{sin}(144^\circ)} = 2.55\) (Si alguien se anima, no es tan díficil averiguar los valores exactos de estos senos sin calculadora).  </p>
+      <p> En definitiva, el radio de \(\mathcal{C}\) es \(2.55\). </p>
+      <p> Por último, Notemos que \(\angle ODB = 180^\circ - 144^\circ = 36^\circ \) y por lo tanto como el triángulo \(ODB\) es isosceles tenemos que es un triángulo \( 36^\circ-72^\circ-72^\circ \) (es decir dorado). Como sabemos que \(\overline{OB}/\overline{DB} = \Phi \) finalmente se obtiene que \(\overline{DB} = \overline{OB}/\Phi = 2.55/\Phi = 1.58 \). </p>
+      
+      <p> Una última observación. Una vez averiguado \(\overline{AB}\), hay varias maneras de de seguir el ejercicio. por ejemplo notar que \(ABD\) es triángulo rectángulo en \(B\) (¿por qué?) de ángulos \(18^\circ-72^\circ-90^\circ\) y hacer trigonometría básica SOH-CAH-TOA para averiguar la hipotenusa \(\overline{AD} \) y el cateto \(\overline{DB}\). </p>
+    </li> 
+    <li>  
+      <p> Una forma sencilla es Calcular el área del triangulo plateado \(ACB\) y el area del triángulo rectángulo \(ABD\). </p>
+      <p> Primero vamos a mostrar que \(ABD\) es efectivamente un triángulo rectangulo y luego calcularemos su área que es sencilla. Notemos que sabiamos que \(\angle ADB = 72^\circ\) y \(\angle DAB = 18^\circ\). De esta manera, por suma de ángulos internos resulta que \( \angle ABD = 90^\circ \). </p>
+      <p> Entonces el area del triángulo \(ABD\) es simplemente \(\frac{\text{base}\cdot\text{altura}}{2}\). Esto es \(\frac{\overline{AB} \cdot \overline{DB}}{2} = \frac{ 3\Phi \cdot 1.58}{2} = 3.82  \). </p>
+      <p> Finalmente saquemos el área \(ACB\) triángulo plateado. Podemos usar muchas fórmulas. A saber: Herón, \(\text{Área} = \frac{1}{2}a\cdot b\text{sin}(c)\) etc.</p>
+      <p> Sin embargo en esta situación como sabemos el circunradio \(R\) de \(ACB\) lo más cómodo quizás sea usar la fórmula \( \text{Área} = \frac{a\cdot b \cdot c}{4R} \). En este caso tenemos \(\text{Área} = \frac{3\phi \cdot 3 \cdot 3}{4\cdot 2.55} = 4.28 \)</p>
+      <p> O sea, finalmente el área del paralelogramo es \(3.82+4.28 = 7.1 \) </p>
+    </li>
+  </ol>  
+  
+  <h2> Para reflexionar sobre el ejercicio anterior (muy opcional): </h2>
+
+  <b>Preguntas:</b> ¿Cuánto vale exactamente la altura de un triángulo dorado? ¿Cuanto es el seno de \(72^\circ\)?
+
+  <p> Encontramos que el triángulo \(ADB\) es un triangulo de angulos \(18^\circ-72^\circ-90^\circ\). </p>
+  <p> Podriamos inventar notación para esta situación y llamar a este triángulo un "triángulo medio dorado". ¿Por qué? miremos la siguiente figura donde reflejamos \(D\) respecto a \(AB\) para crear un triánglo \(ADD'\) dorado de base arbitraria \(a\): </p>
+  <br>
+  
+  <img src="Problemasaureo/p3disq.png" alt="p3">
+  
+  <br>
+
+  <p> En particular por SOH en el triángulo \(ADB\) tenemos \(\text{sen}(72^\circ) = \frac{\sqrt{4\Phi + 3} \cdot a}{2\Phi \cdot a} = \frac{\sqrt{4\Phi + 3}}{2\Phi}\)</p>
+  
+  </details>
   
   <h2> Ejercicio </h2>
   
@@ -43,14 +111,33 @@
   
   <ol> 
     <li> Vea que \(\frac{y}{x} = \Phi\) <b> Aclaración: </b> Basta ver que \(\frac{y}{x} = \frac{y+x}{y}\) </li>
-    <li> Sobre la misma figura se trazan las circunferencias \(\mathcal{C}(A,\overline{AB})\) y \(\mathcal{C}(B,\overline{BH})\) como muestra la figura debajo. Sea \(I\) el punto de intersección entre estas circunferencias. ¿Cuanto miden \(\angle AIB\), \(\angle IAB\) y \(\angle ABI\)   </li>
+    <li> Sobre la misma figura se trazan las circunferencias \(\mathcal{C}(A,\overline{AB})\) y \(\mathcal{C}(B,\overline{BH})\) como muestra la figura debajo. Sea \(I\) el punto de intersección entre estas circunferencias. ¿Cuanto miden \(\angle AIB\), \(\angle IAB\) y \(\angle ABI\)?   </li>
   </ol>  
-  
+
   <br>
   
   <img src="Problemasaureo/p4b.png" alt="p4b">
   
   <br>
+
+  <details > <summary> Esconder/mostrar solución</summary>
+
+  <b>Solución:</b>
+
+  <ol> 
+    <li> 
+      <p> Notemos que \(AB = y\) y que \(DA = AE = y\). Apliquemos teorema de las cuerdas con las cuerdas \(DE\) y \(GH\).  </p> 
+      <p> Entonces tenemos que \(DA \cdot AE = GA \cdot AH \).</p>
+      <p> Como \(AH = y + x \) obtenemos que \(y^2 = x(y+x)\). Pasando \(x\) e \(y\) para el otro lado obtenemos \(\frac{y}{x} = \frac{y+x}{y} \)  </p>
+      <p> Esto asegura que \(\frac{y}{x} = \Phi\) </p>
+    </li>
+    
+    <li>     
+      <p>Notemos que \(\overline{IB} = x\) por ser radio de una circunferencia de radio \(x\), e \(\overline{IA}=\overline{AB} = y\) por ser radios de una circunferencia de radio \(y\). Luego, por el punto anterior tenemos que el triángulo \(AIB\) es isósceles y cumple  \(\frac{y}{x} = \Phi\). Esto automáticamente nos dice que \(AIB\) es un triángulo dorado pues para cualquier triángulo de base \(x\) de ángulos \(72^\circ-72^\circ-36^\circ\) vamos a llegar por lo visto en la teorica a que los lados iguales son \(y = \Phi \cdot x\). Luego por LLL concluimos que deben ser el mismo triángulo, en particular el triángulo original tiene los ángulos \(72^\circ-72^\circ-36^\circ\).   </p>
+    </li>
+  </ol>  
+
+  </details>
   
   <h2> Ejercicio </h2>
   
@@ -63,7 +150,23 @@
   
   <br>
   
+  <details > <summary> Esconder/mostrar solución</summary>
+
+  <b> Solución: </b>
   
+  <p>Notemos que los ángulos internos de un pentágono regular miden \(108^\circ\), en particular \(\angle ABC = 108^\circ\). Como en un pentágono regular los lados son iguales, tenemos que \(ABC\) es isósceles, \(\angle CAB = \angle BAC = 36^\circ\) (\(ABC\) es un triángulo plateado).  </p>
+  <p> Por otro lado, los triángulos \(EDC\), \(ABC\) y \(DEA\) son congruentes por LLA (los lados del pentágono regular son iguales y los ángulos entre ellos son \(108^\circ\)). Por lo tanto \(\overline{AD} = \overline{AC} = \overline{EC} = \Phi\) </p>
+  <p> Del hecho de que el pentagono regular es inscribible en una circunferencia, obtenemos que \(ABCD\) es cíclico y por lo tanto \(\angle ADC = 180^\circ - \angle ABC = 72^\circ \), y como \(DA\) = \(AC\) resulta que  \(\angle ACD = \angle ADC = 72^\circ\) </p>
+  <p> Es decir que el triángulo \(ACD\) es dorado y el triángulo \(ABC\) es plateado. </p>
+  <p> Como sabemos que en el plateado tenemos que \(\frac{\overline{AC}}{\overline{AB}} = \Phi\) y que en el dorado \(\frac{\overline{AC}}{\overline{DC}} = \Phi\), ya tenemos todos los lados y podemos calcular cuanto vale el área de cada uno. Y también es fácil ver que el triángulo \(BCF\) es un triángulo isósceles \(72^\circ-54^\circ-54^\circ \) al cual también podemos calcularle el área con varias fórmulas como \(\underbrace{BC}_{=1} \cdot \underbrace{BF}_{=1} \text{sen}(\underbrace{\angle CBF}_{=72^\circ}) \) y finalmente sumamos las áreas</p>  
+  <p> Sin embargo hay más opciones. Notemos que el triángulo \(ACF\) es rectangulo con ángulo recto es \(C\) porque \(AF\) es un diametro. Además sabemos cuanto mide la hipotenusa \(AF\) (mide dos radios y como los radio miden \(1\) resulta que  \(AF = 2\)) y sabemos cuanto mide el cateto \(AC = \Phi\). En particular podemos hacer Pitágoras para averiguar el cateto restante. Haciendo esto obtenemos \(CF = \sqrt{4-\Phi^2} = \sqrt{3-\Phi} \).  </p>
+  <p> Entonces el área del triángulo \(ACF\) es \(\frac{\Phi \cdot \sqrt{3-\Phi}}{2} = 0.95 \) </p>
+  <p> Finalmente calculemos el área del triángulo \(ADC\). En este caso tenemos un triángulo dorado de base \(1\) y lados \(\Phi\). Como ya dijimos antes, al conocer todos los lados y ángulos de este triángulo tenemos una variedad de opciones. Por ejemplo, Herón. </p> 
+  <p> \(\text{Area}(ADC) = \sqrt{(\Phi+\frac{1}{2})(\frac{1}{2})(\frac{1}{2})(\Phi-\frac{1}{2})} = 0.77\) </p>
+  <p> De esta manera, el área de la figura es \(0.77 + 0.95 = 1.72\)</p>
+  
+  </details>
+
   <h2> Ejercicio </h2>
   
   <p>Sea \(ABCD\) un cuadrado inscripto en un círculo cuyo centro es \(O\). Supongamos que el radio del círculo es \(4\) y que \(E\) es el punto medio de \(DC\) y \(F\) la intersección de \(AE\) con el círculo. Hallar \(EF\), \(FC\) y los ángulos \(\angle AFD\) y \(\angle DCF\). </p>
@@ -71,25 +174,24 @@
   <br>
   
   <img src="Problemascuerdas/p1.png" alt="p4b">
-  
-  <br>
-  
-  <h2> Ejercicio </h2>
-  
-  <p> Sea \(\mathcal{C}\) la circunferencia de la figura, donde \(O\) es su centro, \(\angle ABO = 55^\circ \) y \(\angle ACO = 23\) </p>
-  
-  <br>
-  
-  <img src="Problemascuerdas/p2.png" alt="p4b">
-  
-  <br>
-  
-  <ol> 
-    <li> Hallar el ángulo \(\angle BDC\) </li>
-    <li> Si \(\overline{BC} = 3\), calcular el circunradio del triángulo \(ABC\) y hallar \(\overline{OD}\) </li>
-  </ol>
-  
 
+  <br>
+  
+  <details > <summary> Esconder/mostrar solución</summary>
+
+  <b>Solución: </b> 
+  <p> Sabemos que \(AC = 8\) y como \(ABCD\) es un cuadrado podemos sacar sus lados por Pitágoras. Entonces \(DC = 4\sqrt{2} \). </p>
+  <p> También por Pitágoras podemos averiguar \(AE\), \(AE^2 = (4\sqrt{2})^2 + (2\sqrt{2})^2\) luego \(AE = 2\sqrt{10}\). </p>
+  <p> Ahora podemos usar toerema de las cuerdas con las cuerdas \(AF\) y \(DC\). Tenemos \(AE\cdot EF = DE \cdot EC\) o lo que es lo mismo \(2\sqrt{10} \cdot EF = (2 \sqrt{2})^2 \). </p>
+  <p> Despejando tenemos \(EF = \frac{8}{2\sqrt{10}} = \frac{4}{\sqrt{10}} \). </p>
+  <p> Ahora notemos que el triángulo \(AFC\) es un triángulo rectángulo en \(F\) pues \(AC\) es un diametro. Entonces podemos usar Pitágoras una vez más en el triángulo \(EFC\), tenemos que \(FC^2 + EF^2 = EC^2\). Es decir \( FC^2 + (\frac{4}{\sqrt{10}})^2 = (2\sqrt{2})^2 \). </p>
+  <p> De esta manera \(FC^2 + \frac{16}{10} = 8\), es decir \(FC = \frac{8}{\sqrt{10}}\). </p>
+  <p> Sobre los ángulos, mirando la cuerda \(AD\) tenemos que \(\angle ACD = 45^\circ\), por lo tanto  \(\angle AFD = 45^\circ\). </p>
+  <p> Por otro lado \(\angle DFC\) lo podemos sacar con teorema del conseno en el triángulo \(EFC\) ya que sabemos todos sus lados. Hay que resolver \( EF^2 = EC^2 + FC^2 - 2EC\cdot FC \text{cos}(\theta) \), queda hacer la cuenta.  </p>
+  
+  <br> 
+
+  </details>
 
 <h2> Ejercicio </h2>
 
@@ -105,6 +207,7 @@
 
 <p><b>Posible pista:</b> Ver que el triángulo \(ABM\) es semejante al triángulo \(ACD\). Concluir que \(2\alpha = \beta\). </p> 
  
+<details > <summary> Esconder/mostrar solución</summary>
 
 <em><b>Solución: </b></em> a)
 
@@ -139,6 +242,7 @@
 <p>b) Tenemos que el triángulo \(AMD\) es un triángulo plateado. Recordemos que en un triangulo plateado, si la base es \((\Phi^2) \cdot a \) entonces los lados iguales son \(\Phi \cdot a \).  </p>
 <p> En particular, sabemos en este caso que \(3 = \Phi^2 \cdot a\) y por lo tanto \(a = 3/\Phi^2 \) y por lo tanto \( y = 3 /\Phi \). Como \(y/x = \Phi \), tenemos que \(x = 3/\Phi^2 \)</p>
 
+</details>
 
 <h2> Ejercicio </h2>
 
@@ -151,6 +255,8 @@
 <img src="Problemasaureo/p2.png" alt="pdc">
 
 <br>
+
+<details > <summary> Esconder/mostrar solución</summary>
 
 <p><b>Solución: </b> </p>
 <p> a)Notemos primero que el triángulo \( \triangle CDE \) es isósceles con un ángulo de \(60^\circ\) pues \( \overline{CE} = \overline{CD} \) y \(\angle DCE = 60^\circ \), por lo tanto \(\triangle CDE \) es equilátero. </p>
@@ -172,7 +278,8 @@
 <p> Por el teorema de las cuerdas sabemos que \( \overline{FE} \cdot \overline{EG} = \underbrace{\overline{CE} \cdot \overline{EB}}_{ \overline{DE}^2} \). </p>
 <p> Tenemos \(\overline{FE} = \underbrace{\overline{FD}}_{=\overline{EG}} + \overline{DE} = \overline{EG} + \overline{DE} \).</p> 
 <p> Por lo tanto tenemos \( (\overline{EG} + \overline{DE}) \cdot \overline{EG} = \overline{DE}^2 \) o lo que es lo mismo \(\frac{\overline{EG} + \overline{DE}}{\overline{DE}}  = \frac{\overline{DE}}{\overline{EG}} \) como queríamos. </p>
- 
+
+</details>
 <br>
 
 

@@ -14,6 +14,8 @@
 
 <body>  
 
+<h2>Problema <span class="problema-nro"></span></h2>
+ 
 <p>
 Dados los puntos \(A\), \(P\) y \(Q\) como en la figura, construir un cuadrado \(ABCD\) tal que \(P\) esté en el lado \(\overline{BC}\) y \(Q\) esté en el lado \(\overline{CD}\)     
 </p>
@@ -23,7 +25,7 @@ Dados los puntos \(A\), \(P\) y \(Q\) como en la figura, construir un cuadrado \
 <button title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler') .style.display=='none') {document.getElementById('spoiler') .style.display=''}else{document.getElementById('spoiler') .style.display='none'}">Mostrar/esconder solución</button>
 <div id="spoiler" style="display:none">
   <p><strong>Dibujo</strong></p> 
-  <img src="spoma.png" alt="sp1">
+  <img src="spoma.png" alt="spoma">
   
     <p> Nuestro objetivo realmente es crear un punto \(C\) tal que \(P\hat{C}Q = 90^\circ \) y \(A\hat{C}Q = 45^\circ \), veamos como: </p>
 
@@ -40,6 +42,74 @@ Dados los puntos \(A\), \(P\) y \(Q\) como en la figura, construir un cuadrado \
 y es claro que \( R\hat{P}Q = 45^\circ \) </p>
 
 </div>
+
+
+
+
+
+<h2>Problema <span class="problema-nro"></span></h2>
+
+<p>
+Dada una circunferencia \( \mathcal{C} \), un punto \(A\) en \(\mathcal{C}\) y \(B\) en el interior de \(\mathcal{C}\) como muestra la figura abajo. 
+Construir un paralelogramo \(ABCD\) tal que \(C\) y \(D\) estén sobre la circunferencia \(\mathcal{C}\)
+</p>
+
+<img src="pdc.png" alt="pdc"><br>
+
+<button title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler2') .style.display=='none') {document.getElementById('spoiler2') .style.display=''}else{document.getElementById('spoiler2') .style.display='none'}">Mostrar/esconder solución</button>
+<div id="spoiler2" style="display:none">
+  <p><strong>Dibujo</strong></p> 
+  <img src="pds2.png" alt="pds2">
+  
+  <p><strong>Pasos de la construcción</strong></p>
+  <p>
+  1) Construimos una circunferencia \(\mathcal{C}_1(A,B)\), llamamos \(P\) <br>
+  a la intersección de \(\mathcal{C}_1(A,B)\) con \(\mathcal{C}\). <br>
+  2) Ahora trazamos la recta \(PB\) y su intersección con \(\mathcal{C}\) la llamamos \(C\) <br>
+  3) Trazamos la paralela a \(\overline{AB}\) por \(C\) y su intersección con \(\mathcal{C}\) es \(D\)
+
+  </p>
+
+  <p><strong>Justificación</strong></p>
+   <p>Nuestra estrategia de demostración va a ser mostrar que los ángulos opuestos de \(ABCD\) son iguales, esto asegura que el cuadrilatero construido
+    es un paralelogramo. Veamos como. </p>
+
+  <p> Llamemos \(\alpha\) a \( A\hat{P}C = A\hat{B}P \). Entonces, como \(APCD\) es un cuadrilatero cíclico, tenemos que 
+    \(A\hat{D}C = 180^\circ - \alpha\). A su vez, como \(A\hat{B}P = \alpha\), tenemos que \(A\hat{B}C = 180^\circ-\alpha\).
+    Ahora, \(DC\) es paralela a \(AB\) por construcción, y \(PC\) es una transversal. Por ángulos correspondientes entre paralelas
+    tenemos que \(B\hat{C}D = A\hat{P}B = \alpha \). Finalmente, como \(ABCD\) es un cuadrilatero, debe sumar \(360^\circ = 2(180-\alpha) + \alpha + D\hat{A}B\), despejando obtenemos \(D\hat{A}B = \alpha\). 
+    En definitiva, probamos que en el cuadrilatero \(ABCD\) se tiene que los ángulos opuestos son iguales, es decir
+     \(\hat{A} = \hat{C} = \alpha\) y \(\hat{B} = \hat{D} = 180^\circ-\alpha\). Esto demuestra que \(ABCD\) es un paralelogramo.
+
+  </p>
+
+</div>
+
+<h2>Problema <span class="problema-nro"></span></h2>
+
+<p>
+Sean una recta \( \mathcal{L} \), y puntos \(A\) y \(B\) como muestra la figura abajo. 
+Construir un punto \(C\) en \( \mathcal{L} \) tal que el ángulo \(A\hat{C}B\) sea máximo.
+</p>
+
+<img src="pdc2.png" alt="pdc"><br>
+
+
+<h2>Problema <span class="problema-nro"></span></h2>
+
+<p>
+Sea \(\Delta ABC\) un triángulo isosceles tal que \( \overline{AB} = \overline{AC} \). Sea \(D\) un punto que está sobre la bisectriz de \(A\hat{B}C\) y tal que \(\Delta ACD\) es isosceles \( \overline{AC} = \overline{AD} \). Además se sabe que \(3 A\hat{D}C = B\hat{D} C). Si \(\overline{BC} = 6\), calcular cuanto mide \(\overline{AB} = \overline{AC} = \overline{AD}\) y \(\overline{CD}\). 
+</p>
+
+
+
+<script>
+  document.querySelectorAll("span.problema-nro")
+      .forEach((item, indice) => item.innerText = indice + 1);
+</script>
+
+
 </body>
+
 </html><!DOCTYPE html>
 <html>

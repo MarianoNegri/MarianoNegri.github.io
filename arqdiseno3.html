@@ -12,7 +12,7 @@
 </head> 
 
 <body>
-
+  <h2> Estos ejercicios vienen con una solución, de las mucha que hay. Si tienen ganas pueden tratar de hacerlos. Si no, con los ejercicios guia alcanza. Voy a tratar de poner más. </h2>
   <h2> Ejercicio </h2>
   
   <p> Sea \(\mathcal{C}\) la circunferencia de la figura, donde \(O\) es su centro, \(\angle ABO = 55^\circ \) y \(\angle ACO = 23\) </p>
@@ -31,10 +31,10 @@
 
 <details > <summary> Esconder/mostrar solución</summary>
 <b> Solución: </b>
-    <p>Observemos la cuerda \(\overline{BC}\). Primero que nada el angulo central \(\angle BOC = 2\alpha\) para algún \(\alpha\) a determinar.</p> 
-    <p>Por otro lado miremos la misma cuerda \(\overline{BC}\). Sabemos que si el ángulo centrla es \(2\alpha\) entonces \( BAC = \alpha \). </p>
+    <p>Observemos la cuerda \(\overline{BC}\). Primero que nada el angulo central es \(\angle BOC = 2\alpha\) para algún \(\alpha\) a determinar.</p> 
+    <p>Por otro lado miremos la misma cuerda \(\overline{BC}\). Sabemos que si el ángulo central es \(2\alpha\) entonces \( \angle BAC = \alpha \). </p>
     <p>Ahora, los ángulos \( \angle ADB =  \angle ODC \) son iguales por ser opuestos por el vértice, llamemoslos \(\beta\) </p>
-    <p>Finalmente tenemos un sistemita de 2 ecuaciones 2 incognitas fácil de resolver porque los angulos internos de los triángulos \(ADB\) y \(DOC\) suman \(180^\circ\) </p>
+    <p>Finalmente tenemos un sistemita de 2 ecuaciones 2 incognitas fácil de resolver porque los ángulos internos de los triángulos \(ADB\) y \(DOC\) suman \(180^\circ\) </p>
     <p> Es decir, tenemos la ecuación \(\alpha + \beta + 55^\circ = 180^\circ\) para el triángulo \(ADB\), y la ecuacion  \(2\alpha + \beta + 23^\circ = 180^\circ\) para el triángulo \(ODC\) </p>
     <p> Si resolvemos este sistema tenemos que \(\alpha + 23^\circ - 55^\circ = 0^\circ \) es decir \(\alpha = 32^\circ\) y luego \(\beta = 93^\circ\). </p>
     <p> Finalmene tenemos que  \(\angle BDC = 180^\circ - \beta = 77^\circ\).  </p> 
@@ -187,11 +187,77 @@
   <p> Ahora notemos que el triángulo \(AFC\) es un triángulo rectángulo en \(F\) pues \(AC\) es un diametro. Entonces podemos usar Pitágoras una vez más en el triángulo \(EFC\), tenemos que \(FC^2 + EF^2 = EC^2\). Es decir \( FC^2 + (\frac{4}{\sqrt{10}})^2 = (2\sqrt{2})^2 \). </p>
   <p> De esta manera \(FC^2 + \frac{16}{10} = 8\), es decir \(FC = \frac{8}{\sqrt{10}}\). </p>
   <p> Sobre los ángulos, mirando la cuerda \(AD\) tenemos que \(\angle ACD = 45^\circ\), por lo tanto  \(\angle AFD = 45^\circ\). </p>
-  <p> Por otro lado \(\angle DFC\) lo podemos sacar con teorema del conseno en el triángulo \(EFC\) ya que sabemos todos sus lados. Hay que resolver \( EF^2 = EC^2 + FC^2 - 2EC\cdot FC \text{cos}(\theta) \), queda hacer la cuenta.  </p>
+  <p> Por otro lado \(\angle DCF\) lo podemos sacar con teorema del conseno en el triángulo \(EFC\) ya que sabemos todos sus lados. Hay que resolver \( EF^2 = EC^2 + FC^2 - 2EC\cdot FC \text{cos}(\angle DCF) \), queda hacer la cuenta.  </p>
   
   <br> 
 
   </details>
+
+  <h2> Ejercicio </h2>
+  <p> Consideremos la figura que hay debajo, donde \(\overline{BA} = \overline{CE}\) y \( \angle BAD = \angle DAC \). Demuestre que el triángulo \(DAE\) es isóceles. </p>
+
+  <br>
+  
+  <img src="Problemascuerdas/p4.png" alt="p4b">
+
+  <br>
+
+  <details > <summary> Esconder/mostrar solución</summary>
+  <p> Veamos el dibujo de abajo y hagamos la deducción que \(BD = DC\).</p>
+
+  <br>
+  
+  <img src="Problemascuerdas/p41.png" alt="p4b">
+
+  <br>
+  
+  <p> Mirando la cuerda \(BD\), vemos que \(\angle BAD = \angle BCD = \alpha \).  </p>
+  <p> Mirando la cuerda \(CD\), vemos que \(\angle CBD = \angle CAD = \alpha \).</p>
+  <p> Esto demuestra que el triángulo \(BDC\) es isósceles y luego \(BD = DC\) </p>
+  <p> Ahora, Veamos que \(\angle ABD = \angle DCE\)
+  <p> Como el cuadrilatero es cíclico, tenemos que \(\angle ABD = 180^\circ - \underbrace{\angle ACD}_{180^\circ - \angle DCE} = \angle DCE \) </p>
+  <p> Entonces miremos la figura de abajo: </p>
+  <br>
+  
+  <img src="Problemascuerdas/p42.png" alt="p4b">
+
+  <br>
+    
+  Tenemos que \(BAD = CED\) por LAL, o sea \(AD = ED\) 
+
+  </details>
+
+
+
+  <h2> Ejercicio </h2>
+
+  <p> Supongamos que tenemos un cuadrilátero \(ABCD\) inscripto en un círculo como en la figura. Supongamos que las diagonales \(\overline{AC}\) y \( \overline{DB}\) se cruzan en \(P\) de manera recta, es decir \(\angle APD = 90^\circ\). Sea \(E\) un punto sobre \(AB\) tal que \(AEP = 90^\circ\) y prolonguemos \(EP\) hasta que se corta con \(CD\) en el punto que llamaremos \(F\).  </p>
+  <p> Muestre que \(DF = FC\). Abajo hay un figura de la situación:</p>
+
+  <b> Posible sugerencia:</b> Ver que los triángulos \(APB\), \(PEB\) y \(AEP\) son semejantes. Use esto para deducir que el triángulo \(DFP\) es isósceles y lo mismo con \(PFC\).
+
+  <br>
+  
+  <img src="Problemascuerdas/p3.png" alt="p4b">
+
+  <br>
+
+  <details > <summary> Esconder/mostrar solución</summary>
+  
+  <p> Primero veamos que el triángulo \(APB\) es semejante al triángulo \(PEB\)
+  <p> Recordemos que \(\angle PEB = 90^\circ \) y notemos que el ángulo \(\angle APB = 90^\circ\). Además trivialmente tenemos que \(\angle PBA = \angle PBE\) (llamemoslo \(\beta\)), por lo tanto tenemos que los triángulos \(APB\) y \(PEB\) son semejantes porque comparten dos ángulos, y por tanto el tercero debe ser el mismo. Además, notemos que \(AEP\) también es semejante a los otros dos porque tambien comparte dos ángulos, luego \(\angle APE = \beta\).</p>
+  <p> Ahora notemos que por la cuerda \(\overline{BC}\) tenemos que \(\angle BDC = \angle BAC\) por arco capaz. Tenemos lo que muestra la siguiente figura:  </p>
+ 
+  <br>
+  
+  <img src="Problemascuerdas/p31.png" alt="p4b">
+
+  <br>
+  <p> Ahora, por opuestos por el vértice tenemos que \( \angle EPB = \alpha = \angle DPF \), y por lo tanto \(DFC\) es isósceles. De esto sale que \(\overline{DF} = \overline{FP} \)</p>
+  <p> Ahora vamos a ver que \(PFC\) también es isosceles.  </p>
+  <p> Mirando la cuerda \(AD\) nos damos cuenta que \(\angle ACD = \angle ABD = \beta\) y además como \(\angle FPC = \angle APE = \beta\) por opuestos por el vértice.</p>
+  <p> Esto significa que \(PFC\) es isósceles, concluimos que \(PF = FC\) y como ya habiamos dicho que \(PF = DF\), concluimos que \(DF = FC\) como queriamos.</p>    
+</details>
 
 <h2> Ejercicio </h2>
 

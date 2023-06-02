@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Página Mariano Negri</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+</head> 
+
+<body>
+
+<h2>Cositas importantes: </h2>
+
+<ol>
+    <li> Si tenemos una recta en forma implícita \(ax + by + c = 0\) entonces en forma paramétrica es  \( \mathcal{R}: [(b,-a)] + (1,-c) \) </li>                   
+    <li> Si tenemos una recta en forma paramétrica \([(a,b)] + (c,d)\) entonces en forma implícita es \(ay - bx - (ad - bc) = 0\)</li>
+    <li> (Una reformulación de lo anterior) Si tenemos una recta en forma paramétrica \([(a,b)] + (c,d)\) entonces en forma implícita es \(a(y - d) - b(x - c)  = 0\) </li>
+ 
+</ol>
+
+
+<h2> Ejercicio </h2>
+<ol>
+    <li><p> </p> </li>
+    <li><p> ¿Existe un \(k \in \mathbb{R}\) tal que \(k(2,1) + (3,2) = (4,2)\)? ¿Se le ocurre una justificación geométrica?  </p></li>
+    <li><p> Sean \(A = (k,2)\) y \(B = (2,k+1)\) con \( k \in \mathbb{R}\) a determinar. Hallar todos los \(k\) de manera tal que la distancia entre \(A\) y \(B\) es 1. Graficar los \(A\) y \(B\) hallados.</p></li>
+</ol>
+
+<details > <summary> Esconder/mostrar solución</summary>
+<p> La distancia entre dos vectores \(A\) y \(B\) es \(\| A - B \| = \|(k-2, -k+1)\| = \sqrt{(k - 2)^2 + (-k + 1)^2 } = \sqrt{2k^2 - 6k + 5} = 1 \).  </p>
+<p> De esta manera buscamos los \(k \in \mathbb{R}\) tales que \(\sqrt{2k^2 - 6k + 5} = 1 \iff 2k^2 - 6k + 4 = 0 \iff (k-1)(k-2) = 0 \) </p>
+<p> Luego hay dos posibilidades, a saber \(A_1 = (1,2)\) y \(B_1 = (2,2)\), y por otro lado \(A_2 = (2,2)\) y \(B_2 = (2,3)\) </p>
+</details>
+
+
+<h2> Ejercicio</h2>
+
+
+<ol>
+    <li><p>Consideremos los puntos \(A = (2,1)\), \(B = (0,3)\), \(C = (4,4)\), \(D = (6,2) \)</p>
+        <p>Demostrar que \(ABCD\) se trata de un paralelogramo viendo que sus lados opuestos son de igual medida. </p> </li>
+    <li><p> Sean los vectores \(v = (3,1)\) y \(w = (4,3)\). Si \(v\) es un lado de un paralelogramo y \(w\) es una diagonal, encontrar un \(u\) de forma tal que \(u\) sea otro lado del paralelogramo. </p> </li>
+        <p> ¿Cuánto mide la otra diagonal de este paralelogramo?</p>
+        <p> ¿Como calcularía el área? (por ahora...)</p>
+    </ol> 
+
+<details > <summary> Esconder/mostrar solución</summary>
+
+<ol>
+    <li><p> Verifiquemos que \(AB = CD\) y que \(BC = AD \).  </p> 
+        <p> En efecto \(\|A-B\| = \| (2,2)\| = \|C-D\| = \| (2,-2)\| = \sqrt{8}\).</p>
+        <p> y por otro lado \( \|B-C\| = (-4,1) = \|A-D\| = (-4,-1) \| = \sqrt{17} \). </p>
+        <p> De esta manera verificamos que los lados opuestos son de igual longitud y por lo tanto es un paralelogramo.</p>
+    </li>
+    <li> <p> Buscamos \(u\) tal que \(u + v = w\). Es decir, \(u = w - v = (1,2)\).
+         <p> Ahora que sabemos los dos lados, la otra diagonal mide \( \| u-v \| = \|(-2,1)\| = \sqrt{5} \)</p>
+         <p> Para calcular el área podemos pensar en que el paralelogramo está dividido en \(2\) triángulos congruentes de lados que miden \(\|u\|\), \(\|v\|\) y \(\|u+v\|\) y aplicar Herón. </p>
+    </li> 
+</ol>
+ 
+</details > 
+
+
+<h2> Ejercicio </h2>
+
+<p>Consideremos un triangulo rectángulo de lados \(3\), \(4\) y \(5\). Encontrar la distancia del circuncentro al incentro.</p>
+
+<br>
+
+<img src="Problemasplano/p51.png" alt="pdc">
+
+<br>
+
+
+<details > <summary> Esconder/mostrar solución</summary>
+
+<p>Notemos que para cualquier triángulo rectángulo, el ortocentro se encuentra en el punto medio de su hipotenusa (es trazar las mediatrices de los catetos, probarlo). </p>
+<p>Por otro lado, recordemos que el incentro se encuentra en la intersección de dos rectas perpendiculares a los catetos. Es decir, como se ve en la figura se encuentra en la coordenada \((r,r)\) donde \(r\) es el inradio </p>
+<p>De esta manera, el ortocentro se encuentra en \(\frac{A + C}{2} = \left(2,\frac{3}{2} \right)\) y podemos calcular el inradio como \(r = \text{Área}/s = 6/6 = 1\), o sea que el incentro se encuentra en \((1,1)\)  </p>
+<p>Por lo tanto la distancia entre el ortocentro y el incentro es \( \| \left(2,\frac{3}{2} \right) - (1,1) \| = \| \left(1,\frac{1}{2} \right) \| = \sqrt{5}/2 \)</p>
+ 
+</details>
+
+
+<h2> Ejercicio </h2>
+
+<p>Consideremos la recta \(\mathcal{R}\) definida por los puntos \(E = (2,4)\) y \( F = (5,6) \).</p>
+<p>Sean los puntos \(A = (3,7)\) y \(A = (6,2)\). Hallar todos los puntos \(C \in \mathcal{R}\) tales que \(\angle ACB = 90^\circ\)</p>
+ 
+<h2>Ejercicio</h2>
+
+<p>Demostrar que los puntos medios de un triángulo \(ABC\) se intersecan en un punto, que llamamos ortocentro.</p>
+<p> <b> Sugerencia: </b> puede suponer sin ningún problema que dos puntos del triángulo, por ejemplo \(A\) y \(B\) son \(A = (b,0)\) y \(B = (-b,0)\). <p>
+
+
+
+<h2> Ejercicio </h2> 
+
+
+<p>Sea \(A = (1,3)\) y \(B = (6,4)\) puntos en el plano. Encuentre todos los \(C\) tales que \(\triangle ABC\) es un triángulo equilatero.</p>
+
+<br>
+
+<img src="Problemasplano/p2.png" alt="pdc">
+
+<br>
+
+
+<details > <summary> Esconder/mostrar solución</summary>
+
+<p><b>Solución: </b> Notemos que \(C\) es un punto tal que \(\overline{AC} = \overline{BC} \)  </p>
+<p> Por lo tanto, \(C\) está sobre la mediatriz de \(\overline{AB}\). </p> 
+<p> La mediatriz es la recta que pasa por el punto medio de \(\overline{AB}\) y es perpendicular a este segmento. El punto medio lo calculamos como: </p>
+<p> \(M_C = \frac{ A + B }{2} = \left( \frac{1+6}{2}, \frac{3+4}{2} \right) = \left( \frac{7}{2}, \frac{7}{2} \right) \) </p>
+<p> Y el vector director de la recta debe ser perpendicular a \(\vec{BA}\), es decir perpendicular a \(B-A = (6,4)-(1,3) = (5,1) \).</p> 
+<p> Luego la recta donde se encuentra \(C\) es:</p> 
+<p> \(\mathcal{R}: [(-1,5)] + \left( \frac{7}{2}, \frac{7}{2} \right) = \left(-t + \frac{7}{2}, 5t + \frac{7}{2}  \right) \) </p> 
+<p> Por lo tanto \(C\) tendra la forma \(C = \left(-t + \frac{7}{2}, 5t + \frac{7}{2}  \right) \) para algún \(t \in \mathbb{R}\) </p>
+<p> Para averiguar \(t\), usamos el hecho de que \(\overline{BA} = \overline{CA}\) es decir: 
+<p> \( \sqrt{26} = \sqrt{\left(-t + \frac{5}{2} \right)^2 + \left( 5t + \frac{1}{2}  \right)^2} \)</p> 
+<p> Si expandimos todo queda  \( t^2 = \frac{3}{4}\), luego tenemos dos soluciones \(t_1 = \frac{\sqrt{3}}{2}\) y \(t_2 = -\frac{\sqrt{3}}{2}\). </p>
+<p> Por lo tanto hay dos puntos posibles: 
+<p> \(C_1 = \left(-\frac{\sqrt{3}}{2} + \frac{7}{2}, 5\frac{\sqrt{3}}{2} + \frac{7}{2}  \right) = \textcolor{red}{\left(\frac{-\sqrt{3} + 7}{2}, \frac{5\sqrt{3} + 7}{2}  \right)} \) </p>
+<p> \( C_2 = \left(\frac{\sqrt{3}}{2} + \frac{7}{2}, -5\frac{\sqrt{3}}{2} + \frac{7}{2}  \right) = \textcolor{red}{\left(\frac{\sqrt{3} + 7}{2}, \frac{-5\sqrt{3} + 7}{2}  \right)} \) </p>
+
+</details>
+
+<br>
+
+<h2> Ejercicio</h2>
+
+Dados dos puntos \(A = (1,1)\),\(B = (2,3)\) encontrar los \(C\) tales que \(AC = BC\) y \(\angle ACB = 45^\circ\)  
+
+<br>
+
+<img src="Problemasplano/p4.png" alt="pdc">
+
+<br>
+
+
+<details > <summary> Esconder/mostrar solución</summary>
+
+    <p>Podemos hacer algo artesanal: Encontrar la mediatriz de \(\overline{AB}\). Sobre ella, encontrar los \(O\) tales que \(\angle AOB = 90^\circ \) (que son puntos mas sencillos de buscar que los \(C\)) y luego usarlos como ángulo central, estilo arco capaz, como muestra la figura:</p>
+ 
+    <br>
+
+    <img src="Problemasplano/p41.png" alt="pdc">
+
+    <br>
+
+    <p>Entonces busquemos la mediatriz. \(B-A = (1,2) \), un vector perpendicular es \(v = (2,-1)\). Por otro lado, el punto medio es \(\frac{A+B}{2} = \left( \frac{3}{2}, 2 \right) \). O sea que \( \mathcal{M}: [(2,-1)] + \left( \frac{3}{2}, 2 \right) \)  </p>
+    <p> Ahora buscamos los puntos \(O\) en \(\mathcal{M}\) tales que \(\langle O-A,O-B \rangle = 0\). Tenemos que \(O-A = (2t + \frac{1}{2} , -t + 1) \) y \(O-B = (2t - \frac{1}{2} , -t - 1) \)</p>
+    <p> De esta manera \(\langle O-A,O-B \rangle = \langle (2t + \frac{1}{2} , -t + 1),(2t - \frac{1}{2} , -t - 1) \rangle = 4t^2 - \frac{1}{4} + t^2 - 1 = 0\) </p>
+    <p> Es decir, buscamos resolver \(5t^2 - \frac{5}{4} = 0\). Esto tiene dos soluciones, \(t = \pm \frac{1}{2}\). De aquí salen \(O_1\) y \(O_2\) reemplazando en \( \mathcal{M} \). </p>
+    <p> tomando \(t = \frac{1}{2}\) tenemos \(O_1 = \left(  \frac{1}{2},\frac{5}{2} \right) \) y tomando \(t = -\frac{1}{2}\) tenemos  \(O_2 = \left(  \frac{5}{2},\frac{3}{2} \right) \). </p>
+    <p> Finalmente el truco es que \( \mathcal{M}: [(2,-1)] + O_1 \) y lo que queremos hacer es sumarle a \(O_1\) un segmentito en la dirección del vector director \( (2,-1) \) pero con la magnitud del radio del circulo, o sea \(\|O_1-A\| = \frac{\sqrt{10}}{2} \).</p>
+    <p> Es decir buscamos \( \|k(2,-1)\| = \frac{\sqrt{10}}{2} \iff |k| \sqrt{5} = \frac{\sqrt{10}}{2} \iff |k| = \frac{\sqrt{2}}{2} \). </p>
+    <p> Finalmente \(C_1 = O_1 - \frac{\sqrt{2}}{2}(2,-1) = \left( \frac{1}{2} - \sqrt{2},\frac{5}{2} + \frac{\sqrt{2}}{2} \right) \)</p>
+    <p> El mismo truco aplica para \(C_2 = O_2 + \frac{\sqrt{2}}{2}(2,-1)\).</p>
+</details>
+<br>
+
+<h2> Ejercicio</h2>
+
+
+<p> Sea \(A = (1,3)\) un punto en el plano. Sea \(\mathcal{R}\) la recta dada en forma paramétrica como \(\mathcal{R}: [(1,1)] + (3,1) \). </p> 
+<ol> 
+    <li> <p>Encuentre una recta \(\mathcal{R}_1\) tal que si \(C\) es la intersección entre \(\mathcal{R}\) y \(\mathcal{R_1}\), y \(B_t\) un punto cualquiera de \(\mathcal{R}\), entonces \(\angle ACB_t = 60^\circ \).  </p></li>
+    <li> <p>Si \(B = (4,2) \), verifique que está en \(\mathcal{R}\), encuentre \(A \in \mathcal{R}_1\) tal que \(ABC\) sea equilátero. <b> Sugerencia: </b> Encuentre \(C\) y halle la mediatriz de \(BC\)</p></li>
+</ol>
+
+<br>
+
+<img src="Problemasplano/p31.png" alt="pdc">
+
+<br>
+  
+
+<details > <summary> Esconder/mostrar solución</summary>
+
+<p><b> Solución: </b></p>
+<ol>
+<li>
+<p> La recta \(\mathcal{R}\) tiene vector director \((1,1)\). Buscamos una recta \(\mathcal{R}_1\) que forme \(60^\circ\) con \(\mathcal{R}\) y pase por \((1,3)\). 
+<p> Para esto alcanza con encontrar un vector director \(v = (v_x,v_y)\) para \(\mathcal{R}_1\) tal que forme \(60^\circ\) con \((1,1)\). </p>
+<p> \( \text{cos}(60^\circ) = \frac{\langle (1,1),(v_x,v_y) \rangle}{\|(1,1)\| \|v\|} \). Sin problema podemos pedir que \(\|v\| = 1\). Es decir tenemos:</p>
+<p> \( \frac{1}{2} = \frac{v_x + v_y}{\sqrt{2}} \). O sea \(v_x = \frac{\sqrt{2}}{2} - v_y\) sin olvidarnos que pedimos que \(v_x^2 + v_y^2 = 1\). </p>
+<p> Es decir, tenemos que \( (\frac{\sqrt{2}}{2} - v_y)^2 + v_y^2 = 2v_y^2 - \sqrt{2}v_y + \frac{1}{2} = 1  \). Esto es una ecuación cuadrática que tiene dos soluciones,  \(v_y = \frac{\sqrt{2} \pm \sqrt{6}}{4} \) lo cual nos da dos \(v_x = \frac{\sqrt{2}}{2} - \left( \frac{\sqrt{2} \pm \sqrt{6}}{4} \right) \) </p>
+<p> Elegimos uno (y multiplicamos por \(4\)), por ejemplo obtenemos \(v = \left(\sqrt{2} + \sqrt{6}, \sqrt{2} - \sqrt{6} \right) \), luego \(\mathcal{R}_1: [v] + A  \). </p>
+</li>
+<li>
+<p> Ahora bien, \(C\) es la intersección entre \(\mathcal{R}: [(1,1)] + (3,1)\) y \(\mathcal{R}_1: [\left(\sqrt{2} + \sqrt{6}, \sqrt{2} - \sqrt{6} \right)] + (1,3) \).  </p>
+<p> Pasamos a implícita las ecuaciones son \((x-3) - (y-1) = 0\) y la ecuación \( (\sqrt{2} - \sqrt{6})(x - 1) - (\sqrt{2} + \sqrt{6})(y-3) = 0\) y resolvemos el sistema de ecuaciones. </p>    
+<p> Resolviendo el sistema tenemos que \(C = (3+ \frac{2}{\sqrt{3}}, 1 + \frac{2}{\sqrt{3}}) \) </p>
+<p> Ahora encontremos la mediatriz de \(BC\): Sabemos que el punto medio es \( \frac{B + C}{2} = \left( \frac{7 + \frac{2}{\sqrt{3}}}{2},\frac{3 + \frac{2}{\sqrt{3}}}{2} \right) =  (\frac{7}{2} + \frac{1}{\sqrt{3}}, \frac{3}{2} + \frac{1}{\sqrt{3}} ) \). Además el vector director es uno perpendicular a \(B - C = (1- \frac{2}{\sqrt{3}}, 1 - \frac{2}{\sqrt{3}}) \) </p>
+<p> Es decir, la mediatriz \( \mathcal{M} = [(-1 + \frac{2}{\sqrt{3}}, 1 - \frac{2}{\sqrt{3}})] + (\frac{7}{2} + \frac{1}{\sqrt{3}}, \frac{3}{2} + \frac{1}{\sqrt{3}} ) \)</p> 
+ 
+<p> Ahora, para encontrar \(A\) tenemos que encontrar la intersección entre la mediatriz \(\mathcal{M}\) y \(\mathcal{R}_1\).  </p>
+<p> Buscamos \(t(-1 + \frac{2}{\sqrt{3}}, 1 - \frac{2}{\sqrt{3}}) + (\frac{7}{2} + \frac{1}{\sqrt{3}}, \frac{3}{2} + \frac{1}{\sqrt{3}} ) = r(\left(\sqrt{2} + \sqrt{6}, \sqrt{2} - \sqrt{6} \right)) + (1,3) \) </p>
+ 
+
+
+</li>
+
+</ol>
+</details> 
+
+<br>
+
+<h2>Ejercicio</h2>
+
+<p> Encontrar todas las rectas que pasan por el punto \((-4,5)\) y están a distancia \(1\) del \((0,0)\) </p>
+
+<p><b>Sugerencia: </b> Si plantea una recta cualquiera \(y = mx + b\) y busca la intersección con \(y = \frac{-1}{m}x\), haciendo un poco de aritmética va a llegar a \(x = \frac{-b \cdot m}{1 + m^2}\) , \(y = \frac{b}{{1 + m^2}}\) </p>
+
+<br>
+
+<img src="Problemasplano/p1.png" alt="pdc">
+
+<br>
+
+<details > <summary> Esconder/mostrar solución</summary>
+
+
+<b>Solución: </b>
+<p> Primero consideremos una recta generica \(y = mx + b\). </p>
+<p> Ahora, calculemos la distancia al \( (0,0) \) de esta recta. Consideramos \(y = \frac{-1}{m} x\), la recta perpendicular a \(y = mx + b\) que pasa por el \( (0,0) \). </p>
+<p> Entonces encontremos la distancia del \( (0,0) \) a la recta. Esto es, buscamos la intersección \(mx + b = \frac{-1}{m} x \), y despejar la coordenada \(x\). </p>
+<p> \(x = \frac{-b}{m + \frac{1}{m}} = \frac{-b \cdot m}{1 + m^2} \) y por lo tanto podemos obtener la otra coordenada \(y = \frac{-b \cdot m^2}{1 + m^2} + b = \frac{-b \cdot m^2 + b(1+m^2)}{1 + m^2} = \frac{b}{{1 + m^2}} \) </p>
+<p> O sea, buscamos que \( \| \Big(  \frac{-b \cdot m}{1 + m^2}, \frac{b}{1 + m^2} \Big)  \| = 1 \), es decir \(   \frac{b^2 \cdot m^2}{(1 + m^2)^2} +  \frac{b^2}{(1 + m^2)^2} = 1  \) pero esto es lo mismo que \(  b^2 \cdot m^2 + b^2 = (1 + m^2)^2 \iff b^2 (m^2 + 1) = (1 + m^2)^2  \iff b^2 = 1 + m^2 \). </p>
+<p> Por otro lado sabemos que la recta cumple que \(5 = -m \cdot 4 + b\), es decir tenemos un sistema de dos ecuaciones y dos incognitas: </p>
+<p> \( \begin{cases} b^2 = 1 + m^2 \\ 5 = -m \cdot 4 + b \end{cases} \iff \begin{cases} b^2 = 1 + m^2 \\ b = 5 + m \cdot 4  \end{cases} \). Reemplazando \(b\) en la primera ecuación obtenemos \((5 + m \cdot 4)^2 = 1 + m^2 \). Esto es una cuadrática, \(15m^2 + 40m + 24 = 0\). </p>
+<p> Resolviendo la cuadrática nos da dos \(m\) distintos \( m = \frac{-40 \pm \sqrt{40^2 - 4\cdot 15 \cdot 24 }}{2\cdot 15} = \frac{-40 \pm \sqrt{160}}{30} = \frac{-40 \pm 4\sqrt{10}}{30} \) y esto dos \(m\) nos dan dos \(b\) distintos, reemplanzado los \(m\) en \(b = 5 + m \cdot 4\). </p>
+<p> O sea tenemos dos rectas: </p>
+<p> \(y = \frac{-40 + 4\sqrt{10}}{30} x +  5 + \frac{-160 + 16\sqrt{10}}{30} \)</p>
+<p> \(y = \frac{-40 - 4\sqrt{10}}{30} x +  5 + \frac{-160 - 16\sqrt{10}}{30} \)</p>
+
+</details>
+
+</body>    
+</html>

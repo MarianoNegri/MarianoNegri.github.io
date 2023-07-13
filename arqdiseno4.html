@@ -17,7 +17,7 @@
 
 <ol>
     <li> Si tenemos una recta en forma implícita \(ax + by + c = 0\) entonces en forma paramétrica es  \( \mathcal{R}: [(b,-a)] + (1,-c) \) </li>                   
-    <li> Si tenemos una recta en forma paramétrica \([(a,b)] + (c,d)\) entonces en forma implícita es \(ay - bx - (ad - bc) = 0\)</li>
+    <li> Si tenemos una recta en forma paramétrica \([(a,b)] + (c,d)\) entonces en forma implícita es \(bx - ay  - (b,-a)\cdot(c,d) = 0\)</li>
     <li> (Una reformulación de lo anterior) Si tenemos una recta en forma paramétrica \([(a,b)] + (c,d)\) entonces en forma implícita es \(a(y - d) - b(x - c)  = 0\) </li>
  
 </ol>
@@ -51,8 +51,8 @@
 
 <ol>
     <li><p> Verifiquemos que \(AB = CD\) y que \(BC = AD \).  </p> 
-        <p> En efecto \(\|A-B\| = \| (2,2)\| = \|C-D\| = \| (2,-2)\| = \sqrt{8}\).</p>
-        <p> y por otro lado \( \|B-C\| = (-4,1) = \|A-D\| = (-4,-1) \| = \sqrt{17} \). </p>
+        <p> En efecto \(\|A-B\| = \|(2,-2)\| = \|C-D\| = \| (2,-2)\| = \sqrt{8}\).</p>
+        <p> y por otro lado \( \|B-C\| = (-4,-1) = \|A-D\| = (-4,-1) \| = \sqrt{17} \). </p>
         <p> De esta manera verificamos que los lados opuestos son de igual longitud y por lo tanto es un paralelogramo.</p>
     </li>
     <li> <p> Buscamos \(u\) tal que \(u + v = w\). Es decir, \(u = w - v = (1,2)\).
@@ -77,24 +77,38 @@
 
 <details > <summary> Esconder/mostrar solución</summary>
 
-<p>Notemos que para cualquier triángulo rectángulo, el ortocentro se encuentra en el punto medio de su hipotenusa (es trazar las mediatrices de los catetos, probarlo). </p>
-<p>Por otro lado, recordemos que el incentro se encuentra en la intersección de dos rectas perpendiculares a los catetos. Es decir, como se ve en la figura se encuentra en la coordenada \((r,r)\) donde \(r\) es el inradio </p>
-<p>De esta manera, el ortocentro se encuentra en \(\frac{A + C}{2} = \left(2,\frac{3}{2} \right)\) y podemos calcular el inradio como \(r = \text{Área}/s = 6/6 = 1\), o sea que el incentro se encuentra en \((1,1)\)  </p>
+<p>Recordemos que en un triángulo, para encontrar el ortocentro debemos trazar la mediatriz de dos lados. En este caso podemos trazar la mediatriz de los dos catetos, esto nos dice que la coordenada \(x\) es \(4/2 = 2\) y la coordenada \(y\) es \(3/2\).<p>
+<p>Es decir, el ortocentro se encuentra en el punto \(\left(2,\frac{3}{2} \right)\).</p>
+<p>De hecho, para cualquier triángulo rectángulo el ortocentro se encuentra en el punto medio de su hipotenusa! (¿por qué?). </p>
+<p> Por otro lado, recordemos que si trazamos perpendiculares a los lados que pasan por el incentro, estas tienen todas la misma medida (el inradio \(r\)). De esta manera, mirando las dos perpendiculares a los catetos vemos que el incentro se encuentra en el punto \((r,r)\) donde \(r\) es el inradio </p>
+<p> Podemos calcular el inradio como \(r = \text{Área}/s = 6/6 = 1\), o sea que el incentro se encuentra en \((1,1)\)  </p>
 <p>Por lo tanto la distancia entre el ortocentro y el incentro es \( \| \left(2,\frac{3}{2} \right) - (1,1) \| = \| \left(1,\frac{1}{2} \right) \| = \sqrt{5}/2 \)</p>
- 
+  
 </details>
 
 
 <h2> Ejercicio </h2>
 
 <p>Consideremos la recta \(\mathcal{R}\) definida por los puntos \(E = (2,4)\) y \( F = (5,6) \).</p>
-<p>Sean los puntos \(A = (3,7)\) y \(A = (6,2)\). Hallar todos los puntos \(C \in \mathcal{R}\) tales que \(\angle ACB = 90^\circ\)</p>
- 
-<h2>Ejercicio</h2>
+<p>Sean los puntos \(A = (3,7)\) y \(B = (6,2)\). Hallar todos los puntos \(C \in \mathcal{R}\) tales que \(\angle ACB = 90^\circ\)</p>
 
-<p>Demostrar que los puntos medios de un triángulo \(ABC\) se intersecan en un punto, que llamamos ortocentro.</p>
-<p> <b> Sugerencia: </b> puede suponer sin ningún problema que dos puntos del triángulo, por ejemplo \(A\) y \(B\) son \(A = (b,0)\) y \(B = (-b,0)\). <p>
+<br>
 
+<img src="Problemasplano/p8.png" alt="pdc">
+
+<br>
+
+
+
+<details > <summary> Esconder/mostrar solución</summary>
+<p><b>Solución:</b></p>
+<p> La recta generada por \(E\) y \(F\) es \(\mathcal{R}: [F-E] + E \) o lo que es lo mismo \(\mathcal{R}: [(3,2)] + (2,4) \).</p>
+<p> Es decir, lo puntos de la recta son de la forma \(R(t) = (3t +2, 2t + 4)\) para cualquier \(t \in \mathbb{R}\).</p>
+<p> Como \(C\) pertenece a la recta \(\mathcal{R}\), \(C\) debe ser de la pinta \(C = (3t + 2, 2t + 4) \).</p>
+<p> Ahora bien, buscamos que \(\angle ACB = 90^\circ\) con lo cual buscamos que \(A' = A-C = (-3t +1, -2t+3) \) y \(B' = B-C = (-3t+4,-2t-2)\) sean perpendiculares. </p>
+<p> Es decir, \(A' \cdot B' = 0\) o lo que es lo mismo \((-3t +1, -2t+3) \cdot (-3t+4,-2t-2) = 0 \iff (-3t +1)(-3t+4) + (-2t+3)(-2t-2) = 0 \iff 13t^2 - 17t - 2 = 0 \).  </p>
+<p> De aquí haciendo la resolvente sacamos \(t_1 = \frac{17 + \sqrt{393}}{26} \) y \(t_2 = \frac{17 - \sqrt{393}}{26}\). Con lo cual hay dos \(C\), a saber \(C_1 = (3t_1 + 2, 2t_1 + 4) = (3\frac{17 + \sqrt{393}}{26} + 2, 2\frac{17 + \sqrt{393}}{26} + 4\) y \(C_2 = (3\frac{17 - \sqrt{393}}{26} + 2, 2\frac{17 - \sqrt{393}}{26} + 4)\).  </p>
+</details>
 
 
 <h2> Ejercicio </h2> 
@@ -129,6 +143,103 @@
 </details>
 
 <br>
+
+
+<h2>Ejercicio</h2>
+Sean \(A = (1,1)\) y \(B = (4,4)\) encontrar \(C\) tal que \(\angle BAC = 30^\circ\).
+
+
+
+<h2>Ejercicio (opcional) </h2>
+
+<p> Sea \(ABC\) un triangulo tal que \(\overline{AB} = 2\). Se considera el punto \(D\) tal que \(\angle CAD = 90^\circ\), \(DA = CA\) y \(\angle BAD = \angle CAB + 90^\circ\). </p> 
+<p> De manera semejante se considera el punto  \(E\) tal que \(\angle CBE = 90^\circ\), \(EB = CB\) y \(\angle ABE = \angle CBA + 90^\circ \). </p> 
+<p> Mostrar que el punto medio de \(DE\) es indepediente de donde se ubica el punto \(C\) del triángulo. </p>
+
+<p> <b>Sugerencia</b>: Se puede suponer sin problema que \(A = (-1,0)\), \(B = (0,1)\) y \(C = (x,y)\) con \(x\) e \(y\) números reales. Haga un dibujo y trate de averiguar las coordenadas de \(D\) y \(F\) . </p>
+
+<details > <summary> Esconder/mostrar solución</summary>
+<p><b>Solución:</b></p>
+
+<br>
+
+<img src="Problemasplano/p7.png" alt="pdc">
+    
+<br>
+
+<p>Como muestra la figura, ubicamos \(A = (-1,0)\) y \(B = (1,0)\), \(C = (x,y)\) un punto cualquiera y trazamos la perpendicular a \(AB\) por \(C\) (o sea la altura desde \(C\)) que corta a \(AB\) en \(H\).</p>
+
+<br>
+
+<img src="Problemasplano/p72.png" alt="pdc">
+    
+<br> 
+
+<p>Lo que podemos ver en la figura de arriba es que \(CHA\) es un triángulo congruente a \(DFA\) por ALA (notar que \(\overline{DA} = \overline{CA}\) por enunciado y es muy sencillo ver que \(\angle FAD = \angle HAC\) y por tanto todos los ángulos son iguales, queda como ejercicio sencillo de cazar ángulos). </p>
+<p>De manera semejante podemos ver que \(CHB = BGE\).</p>
+<p>Pero entonces mirando el dibujo, especificamente el triángulo \(ABC\) tenemos \(\|\overline{HB}\| = 1-x\), \(\|\overline{CH}\| = y\), \(\|\overline{AH}\| = 1+x\)</p>
+<p>De esta manera, vemos que \(D = (-(y+1), x+1) \) y \( E = (y+1,1-x) \).  </p>
+<p>Entonces calculamos el punto medio, \(M = \frac{D+E}{2} = (0,1) \). Es decir el punto medio siempre se ubica en \((0,1)\) y no depende de \(C\).</p>
+
+</details>
+
+
+<h2>Ejercicio </h2>
+
+<p> Sean \(A = (1,1) \), \(B = (7,2) \), \( C = (4,6) \). Hallar la recta que pasa por el punto medio de \(\overline{BC}\) y por \(C\) en paramétrica e implicita.</p>
+<p> Hacer lo mismo para la recta que pasa por el punto medio de \(AB\) y \(C\). Chequear que el punto \(\frac{A+B+C}{3}\) se encuentra en ambas rectas (o sea la interesección). Este punto se llama el centroide de \(ABC\)</p>
+
+<details > <summary> Esconder/mostrar solución</summary>
+<b>Solución: </b>
+    <br>
+
+    <img src="Problemasplano/p9.png" alt="pdc">
+        
+    <br> 
+    
+
+<p>El punto medio de \(\overline{BC}\) es \(M_{BC} = \frac{B+C}{2} = (\frac{11}{2},4)\). </p>
+<p>Entonces la recta que pasa por  \( M_{BC} \) y \(A\) es en forma parametrica \(\mathcal{R_1}:[(M_{BC}-A)] + A = [(\frac{9}{2},3)] + (1,1) \). </p>
+<p>En forma implícita es \( \mathcal{R_1}: -3x + \frac{9}{2}y - (-3,\frac{9}{2})\cdot(1,1) = 0\). Es decir \( \mathcal{R_1}: -3x + \frac{9}{2}y -\frac{3}{2} = 0\)</p>
+<p>De forma semejante el punto medio de \(\overline{AB}\) es \(M_{AB} = \frac{A+B}{2} = (4,\frac{3}{2})\).</p> 
+<p>Entonces la recta que pasa por  \( M_{AB} \) y \(C\) es en forma parametrica \(\mathcal{R_2}:[(M_{AB}-C)] + C = [(0,-\frac{9}{2})] + (4,6) \). </p>
+<p>En forma implícita es \( \mathcal{R_2}: \frac{9}{2}x - 0y - (\frac{9}{2},0)\cdot(4,6) = 0\). Es decir \( \mathcal{R_2}: \frac{9}{2}x  - 18 = 0\)</p>
+<p>Para chequear que \(\frac{A+B+C}{3} = (4,3)\) pertenece a ambas rectas podemos usar las implícitas y ver que el punto cumple con las ecuaciones.</p>
+<p>En efecto, \(-3(4) + \frac{9}{2}(3) -\frac{3}{2} = 0 \)  y \(\frac{9}{2}(4) - 18 = 0\).</p>  
+ 
+</details>
+
+<h2>Ejercicio</h2>
+
+<p> Dada una recta \(\mathcal{R}\) y un punto \(P\) que no está en \(\mathcal{R}\), definimos el punto \(Q\) como el simétrico de \(P\) respecto a \(\mathcal{R}\) si \(Q\) pertenece a la recta perpendicular a \(\mathcal{R}\) que pasa por \(P\), y además \(\frac{P+Q}{2} = M\) donde \(M\) es la intersección entre ambas rectas.  </p>
+<p> Ahora, dada la recta \(\mathcal{R}: 2x-3y-3=0 \) y el punto \(P = (-5,13) \), hallar el simétrico \(Q\).</p>
+
+<br>
+
+<img src="Problemasplano/p10.png" alt="pdc">
+
+<br>
+
+
+<details > <summary> Esconder/mostrar solución</summary>
+<b>Solución: </b> 
+<p>Primero buscamos la recta perpendicular a \(\mathcal{R}\) que pasa por \(P\). En primer lugar, un vector director de \( \mathcal{R} \) es \((3,2)\). Por lo tanto \( (2,-3) \) es un vector director de la recta perpendicular.</p>
+<p>Por otro lado, el punto de paso será \(P\), por lo tanto la recta perpendicular a \(\mathcal{R}\) que pasa por \(P\) es \(\mathcal{R_p}:[(2,-3)] + (-5,13)\). </p>
+<p>En forma implicita, \(\mathcal{R_p}:3x + 2y - (3,2) \cdot (-5,13) = 0\). Es decir, \(\mathcal{R_p}: 3x + 2y - 11 = 0\).  </p>
+<p>Ahora, podemos hallar \(M\) la intersección entre \(\mathcal{R}\) y \(\mathcal{R_p}\). Para esto, podemos resolver el sistema \(\begin{cases} 2x-3y-3 = 0 \\ 3x + 2y - 11 = 0 \end{cases} \).  </p>
+<p>Resolviendo este sistema, obtenemos \(y = 1\), \(x = 3\), es decir \(M = (3,1)\).</p>
+<p> Finalmente podemos despejar \(Q\), pues sabemos \(M\) y \(Q\): \(\frac{P + Q}{2} = M \iff Q = 2M - P \iff Q = (11,-11)\)</p>
+    
+</details>
+
+<h2>Ejercicio</h2>
+
+<p>Demostrar que los puntos medios de un triángulo \(ABC\) se intersecan en un punto, que llamamos ortocentro.</p>
+<p> <b> Sugerencia: </b> puede suponer sin ningún problema que dos puntos del triángulo, por ejemplo \(A\) y \(B\) son \(A = (b,0)\) y \(B = (-b,0)\). <p>
+
+
+
+
 
 <h2> Ejercicio</h2>
 
@@ -214,7 +325,7 @@ Dados dos puntos \(A = (1,1)\),\(B = (2,3)\) encontrar los \(C\) tales que \(AC 
 
 <p> Encontrar todas las rectas que pasan por el punto \((-4,5)\) y están a distancia \(1\) del \((0,0)\) </p>
 
-<p><b>Sugerencia: </b> Si plantea una recta cualquiera \(y = mx + b\) y busca la intersección con \(y = \frac{-1}{m}x\), haciendo un poco de aritmética va a llegar a \(x = \frac{-b \cdot m}{1 + m^2}\) , \(y = \frac{b}{{1 + m^2}}\) </p>
+<p><b>Sugerencia: </b> Si plantea una recta de la forma \(y = mx + b\) y busca la intersección con \(y = \frac{-1}{m}x\), haciendo un poco de aritmética va a llegar a \(x = \frac{-b \cdot m}{1 + m^2}\) , \(y = \frac{b}{{1 + m^2}}\) </p>
 
 <br>
 
@@ -226,7 +337,7 @@ Dados dos puntos \(A = (1,1)\),\(B = (2,3)\) encontrar los \(C\) tales que \(AC 
 
 
 <b>Solución: </b>
-<p> Primero consideremos una recta generica \(y = mx + b\). </p>
+<p> Primero consideremos una recta de la forma \(y = mx + b\). </p>
 <p> Ahora, calculemos la distancia al \( (0,0) \) de esta recta. Consideramos \(y = \frac{-1}{m} x\), la recta perpendicular a \(y = mx + b\) que pasa por el \( (0,0) \). </p>
 <p> Entonces encontremos la distancia del \( (0,0) \) a la recta. Esto es, buscamos la intersección \(mx + b = \frac{-1}{m} x \), y despejar la coordenada \(x\). </p>
 <p> \(x = \frac{-b}{m + \frac{1}{m}} = \frac{-b \cdot m}{1 + m^2} \) y por lo tanto podemos obtener la otra coordenada \(y = \frac{-b \cdot m^2}{1 + m^2} + b = \frac{-b \cdot m^2 + b(1+m^2)}{1 + m^2} = \frac{b}{{1 + m^2}} \) </p>
